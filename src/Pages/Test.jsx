@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Pagination from "rc-pagination";
 import JSON from "./TestData.json";
-import SampleDrop from "./Select";
+import SampleDrop from "../components/Select";
 import styled from "styled-components";
 
 const TableFrame = styled.div`

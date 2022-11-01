@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Pagination from "rc-pagination";
-import ResidenceData from "./ResidenceData.json";
+import ActivityData from "./ActivityData.json";
 import SampleDrop from "../../components/Select";
 import styled from "styled-components";
 import SelectDrop from "../../components/Select";
-import { SVGs } from "../../assets/svgs/SVGs";
+// import { SVGs } from "../../assets/svgs/SVGs";
 
 const TableFrame = styled.div`
   // background-color: yellow !important;
@@ -32,12 +32,12 @@ const TableFrame = styled.div`
   
 `;
 
-const ResidenceTable = () => {
+const ActivityTable = () => {
   const [selected, setSelected] = useState("Fiter by:");
   // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
   // ======STATES FOR PAGINATION
-  const datatableUsers = ResidenceData;
+  const datatableUsers = ActivityData;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
@@ -99,11 +99,11 @@ const ResidenceTable = () => {
                       </label>
                     </div>
                   </th>
-                  {/* <th>Name</th> */}
-                  {/* <th></th> */}
-                  <th>Residence ID</th>
-                  <th>Address</th>
-                  <th>Contact</th>
+                  <th>Residence Name</th>
+                  <th>Email</th>
+                  <th>Acess Code</th>
+                  <th>Residence Address</th>
+                  <th>Date and Time</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -145,37 +145,26 @@ const ResidenceTable = () => {
                           </div>
                         </td>
                         <td>
-                          <div className="img-avatar">
-                            <img
-                              src="https://images.unsplash.com/photo-1667222886295-72267cdc99ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-                              alt=""
-                            />
+                          <div className="img-avatar">                     
                             <div className="user-name">
                               {data.last_name} {data.first_name}
                             </div>
-                              <p> {data.id}</p>
                           </div>
                         </td>
 
-                        <td>{data.adress}</td>
+                        <td>{data.email}</td>
 
                         <td className="resume_data">
-                          <div className="contact-mail">
-                          <a href="tel:5554280940">
-                            {data.phone}
-                          <img src={SVGs} alt=""  />
-                          </a>
-
-                          
-                          </div>                       
-                          <div className="contact-tel">
-                          <a href = "mailto:abc@example.com?subject = Feedback&body = Message">Send Feedback</a>
-                          <img src={SVGs} alt=""  />                         
-                          </div>                       
+                          {data["Access code"]}                       
+                          </td>
+                        <td className="resume_data">
+                          {data.address}                       
+                          </td>
+                        <td className="resume_data">
+                          {data.dateTime}                       
                           </td>
                         <td className="resume_data"> <SelectDrop /> </td>
-                        {/* <td className="resume_data">{data.status}</td> */}
-                        {/* <td>{data.status}</td> */}
+                       
                       </tr>
                     );
                   })}
@@ -183,7 +172,7 @@ const ResidenceTable = () => {
             </table>
           </div>
           <Pagination
-            key={ResidenceData.id}
+            key={ActivityData.id}
             className="pagination-data"
             // showTotal={(total, range) => `${range[0]}-${range[1]} / ${total}`}
             onChange={PaginationChange}
@@ -201,7 +190,7 @@ const ResidenceTable = () => {
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Residence</h3>
+        <h3>Activity Log</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">
@@ -226,4 +215,4 @@ const ResidenceTable = () => {
   );
 };
 
-export default ResidenceTable;
+export default ActivityTable;
