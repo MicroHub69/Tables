@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Pagination from "rc-pagination";
 import JSON from "./TestData.json";
+import SampleDrop from "./Select";
 import styled from "styled-components";
 
 const TableFrame = styled.div`
@@ -29,6 +30,7 @@ const TableFrame = styled.div`
 `;
 
 const CareerTable = () => {
+  const [selected, setSelected] = useState("Fiter by:");
   // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
   // ======STATES FOR PAGINATION
@@ -201,6 +203,7 @@ const CareerTable = () => {
       </div>
 
       <div className="">
+        <SampleDrop selected={selected} setSelected={setSelected} />
         <PerData />
       </div>
     </section>

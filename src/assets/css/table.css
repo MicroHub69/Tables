@@ -339,6 +339,90 @@ table td {
   border-color: #eceff5;
 }
 
+.select_me {
+  width: 200px;
+  position: relative;
+  font-family: var(--Nunito);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.select_me h5 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.select_me .select-btn {
+  padding: 10px;
+  background: var(--White);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid rgba(44, 51, 58, 0.2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  height: 45px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--Gunmetal);
+}
+
+.select_me .select-btn img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+}
+
+.select_me .select-btn input {
+  width: auto;
+  background: transparent;
+  outline: 0;
+  font-size: 16px;
+  border: 0;
+}
+
+.select_me .select_content {
+  position: absolute;
+  top: 55px;
+  padding: 10px;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.select_me .select_items {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.select_me .select_items:hover {
+  background-color: rgba(0, 131, 143, 0.07);
+}
+
 @media (max-width: 1024px) {
   .scrollable_table {
     overflow-x: auto;
