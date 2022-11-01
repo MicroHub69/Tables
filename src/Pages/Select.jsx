@@ -8,7 +8,8 @@ const SelectDrop = ({ selected, setSelected }) => {
   return (
     <div className="select_me filter_drop">
       <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
-        <input type="text" value={selected} readOnly />
+        <input type="text" value={selected} readOnly placeholder="Action"/>
+        
         <img
           src="https://www.svgrepo.com/show/356209/chevron-down.svg"
           alt="v"

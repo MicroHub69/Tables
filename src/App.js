@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/table.css";
-import LandingPage from "./Pages/Test";
+import ResidenceTable from "./Pages/Residence/ResidenceTable";
+// import LandingPage from "./Pages/Test";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<LandingPage />} />
+          {/* <Route index element={<LandingPage />} /> */}
+          <Route index element={<ResidenceTable />} />
           {/* <Route path="/table2" element={<NewTable />} /> */}
+
         </Routes>
       </BrowserRouter>
     </>
