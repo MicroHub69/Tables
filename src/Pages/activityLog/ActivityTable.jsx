@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Pagination from "rc-pagination";
 import ActivityData from "./ActivityData.json";
 import SampleDrop from "../../components/Select";
@@ -29,14 +29,68 @@ const TableFrame = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  
+`;
+
+const SwitchBtn = styled.div`
+  .switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background: #dfd9ea;
+    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+  .switch::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: #fafafa;
+    border-radius: 50%;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28),
+      0 0 0 20px rgba(128, 128, 128, 0.1);
+  }
+  input:checked + .switch {
+    background: rgba(45, 75, 243, 1);
+  }
+  input:checked + .switch::before {
+    left: 27px;
+    background: #fff;
+  }
+  input:checked + .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+  }
 `;
 
 const ActivityTable = () => {
   const [selected, setSelected] = useState("Fiter by:");
-  // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
-  // ======STATES FOR PAGINATION
+  const [isChecked, setIsChecked] = useState(false);
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+
+    // 👇️ this is the checkbox itself
+    console.log(event.target);
+
+    // 👇️ this is the checked value of the field
+    console.log(event.target.checked);
+  };
+
+  // ======
+  // 👇️ STATES FOR PAGINATION
   const datatableUsers = ActivityData;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
@@ -77,6 +131,7 @@ const ActivityTable = () => {
     }
     return originalElement;
   };
+
   const PerData = () => {
     return (
       <TableFrame>
@@ -85,20 +140,6 @@ const ActivityTable = () => {
             <table>
               <thead>
                 <tr>
-                  <th className="checkmarking">
-                    {/* CUSTOM CHECKBOX */}
-                    <div class="cntr">
-                      <label for="resume" class="label-cbx">
-                        <input id="resume" type="checkbox" class="invisible" />
-                        <div class="checkbox">
-                          <svg width="20px" height="20px" viewBox="0 0 20 20">
-                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                            <polyline points="4 11 8 15 16 6"></polyline>
-                          </svg>
-                        </div>
-                      </label>
-                    </div>
-                  </th>
                   <th>Residence Name</th>
                   <th>Email</th>
                   <th>Acess Code</th>
@@ -113,58 +154,48 @@ const ActivityTable = () => {
                     if (searchInput === "") {
                       return val;
                     } else if (
-                      val.name.toLowerCase().includes(searchInput.toLowerCase())
+                      val.first_name
+                        .toLowerCase()
+                        .includes(searchInput.toLowerCase())
                     ) {
                       return val;
                     }
                   })
                   .slice()
-                  .map((data) => {
+                  .map((item) => {
                     return (
                       <tr>
-                        <td className="checkmarking">
-                          {/* CUSTOM CHECKBOX */}
-                          <div class="cntr">
-                            <label for={data.id} class="label-cbx">
-                              <input
-                                id={data.id}
-                                type="checkbox"
-                                class="invisible"
-                              />
-                              <div class="checkbox">
-                                <svg
-                                  width="20px"
-                                  height="20px"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                  <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                              </div>
-                            </label>
-                          </div>
-                        </td>
                         <td>
-                          <div className="img-avatar">                     
+                          <div className="img-avatar">
                             <div className="user-name">
-                              {data.last_name} {data.first_name}
+                              {item.last_name} {item.first_name}
                             </div>
                           </div>
                         </td>
 
-                        <td>{data.email}</td>
+                        <td>{item.email}</td>
 
+                        <td className="resume_data">{item["Access code"]}</td>
+                        <td className="resume_data">{item.address}</td>
+                        <td className="resume_data">{item.dateTime}</td>
                         <td className="resume_data">
-                          {data["Access code"]}                       
-                          </td>
-                        <td className="resume_data">
-                          {data.address}                       
-                          </td>
-                        <td className="resume_data">
-                          {data.dateTime}                       
-                          </td>
-                        <td className="resume_data"> <SelectDrop /> </td>
-                       
+                          <SwitchBtn>
+                            <input
+                              value=""
+                              style={{ margin: "20px" }}
+                              type="checkbox"
+                              id={item.id}
+                              onChange={handleChange}
+                              checked={isChecked}
+                            />
+
+                            <label class="switch" htmlFor={item.id}></label>
+                          </SwitchBtn>{" "}
+                          {/* <SelectDrop
+                            selected={selected}
+                            setSelected={setSelected}
+                          />{" "} */}
+                        </td>
                       </tr>
                     );
                   })}
