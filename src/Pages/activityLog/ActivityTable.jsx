@@ -3,8 +3,8 @@ import Pagination from "rc-pagination";
 import ActivityData from "./ActivityData.json";
 import SampleDrop from "../../components/Select";
 import styled from "styled-components";
-import SelectDrop from "../../components/Select";
-// import { SVGs } from "../../assets/svgs/SVGs";
+import { SVGs } from "../../assets/svgs/SVGs";
+
 
 const TableFrame = styled.div`
   // background-color: yellow !important;
@@ -21,9 +21,8 @@ const TableFrame = styled.div`
     margin-left: 10px;
   }
   .team-members {
-    // display: flex;
-    // justify-content: space-between;
     margin-top: 40px;
+    width: 65%;
   }
   .team {
     display: flex;
@@ -85,9 +84,9 @@ const ActivityTable = () => {
             <table>
               <thead>
                 <tr>
-                  <th className="checkmarking">
+                  {/* <th className="checkmarking"> */}
                     {/* CUSTOM CHECKBOX */}
-                    <div class="cntr">
+                    {/* <div class="cntr">
                       <label for="resume" class="label-cbx">
                         <input id="resume" type="checkbox" class="invisible" />
                         <div class="checkbox">
@@ -98,10 +97,10 @@ const ActivityTable = () => {
                         </div>
                       </label>
                     </div>
-                  </th>
+                  </th> */}
                   <th>Residence Name</th>
                   <th>Email</th>
-                  <th>Acess Code</th>
+                  {/* <th>Acess Code</th> */}
                   <th>Residence Address</th>
                   <th>Date and Time</th>
                   <th>Action</th>
@@ -122,9 +121,9 @@ const ActivityTable = () => {
                   .map((data) => {
                     return (
                       <tr>
-                        <td className="checkmarking">
+                        {/* <td className="checkmarking"> */}
                           {/* CUSTOM CHECKBOX */}
-                          <div class="cntr">
+                          {/* <div class="cntr">
                             <label for={data.id} class="label-cbx">
                               <input
                                 id={data.id}
@@ -142,28 +141,28 @@ const ActivityTable = () => {
                                 </svg>
                               </div>
                             </label>
-                          </div>
-                        </td>
+                          </div> */}
+                        {/* </td> */}
                         <td>
-                          <div className="img-avatar">                     
+                          {/* <div className="img-avatar">                     
+                          </div> */}
                             <div className="user-name">
                               {data.last_name} {data.first_name}
                             </div>
-                          </div>
                         </td>
 
                         <td>{data.email}</td>
 
-                        <td className="resume_data">
+                        {/* <td className="resume_data">
                           {data["Access code"]}                       
-                          </td>
+                          </td> */}
                         <td className="resume_data">
                           {data.address}                       
                           </td>
                         <td className="resume_data">
-                          {data.dateTime}                       
+                          {data.date}                       
                           </td>
-                        <td className="resume_data"> <SelectDrop /> </td>
+                        <td className="resume_data"> <img src={SVGs.ActivitySvg} alt="" /> </td>
                        
                       </tr>
                     );
@@ -216,3 +215,5 @@ const ActivityTable = () => {
 };
 
 export default ActivityTable;
+
+

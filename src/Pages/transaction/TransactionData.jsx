@@ -87,9 +87,7 @@ const TransactionTable = () => {
             <table>
               <thead>
                 <tr>
-                  <th className="checkmarking">
-                 
-                  </th>
+               
                   <th>Residence Address</th>
                   <th>Residence Name</th>
                   <th>Mail</th>
@@ -113,9 +111,7 @@ const TransactionTable = () => {
                   .map((data) => {
                     return (
                       <tr>
-                        <td className="checkmarking">
-                      
-                        </td>
+                       
                         <td>{data.address}</td>
                         <td>
                           <div className="img-avatar">                     

@@ -1,6 +1,7 @@
 export const SVGs = {
   // call: require("../svg/call.svg").default,
   call: require("../svgs/email.svg").default,
+  ActivitySvg: require("../svgs/activitySVG.svg").default,
 };
 
 /**
