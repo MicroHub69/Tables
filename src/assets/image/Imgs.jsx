@@ -4,7 +4,5 @@ export const Imgs = {
     PowerAndElectricity: require("../image/power_&_electricity.png"),
     power1: require("../image/power.png"),
     power2: require("../image/power2.png"),
-    residenceRectanglePng: require("../image/residenceRectangle.png"),
-    residencePng2: require("../image/residence.png"),
 
   };

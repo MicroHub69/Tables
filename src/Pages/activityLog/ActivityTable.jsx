@@ -7,16 +7,29 @@ import { SVGs } from "../../assets/svgs/SVGs";
 
 
 const TableFrame = styled.div`
-  // background-color: yellow !important;
-  .img-avatar img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-  }
-  .img-avatar {
-    display: flex;
-    align-items: center;
-  }
+.activity_heading {
+  font-family: 'Satoshi';
+  margin: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  color: #545454;
+
+}
+.activity_table {
+  font-family: 'Satoshi';
+  margin: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  display: flex;
+  align-items: center;
+  
+  /* Grey/2 */ 
+  color: #545454;
+}
   .user-name {
     margin-left: 10px;
   }
@@ -24,9 +37,57 @@ const TableFrame = styled.div`
     margin-top: 40px;
     width: 65%;
   }
-  .team {
+  // .date-time {
+  //     width: 81px;
+  //     height: 36px;
+  //     font-family: 'DM Sans';
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     font-size: 16px;
+  //     line-height: 18px;
+  //     display: flex;
+  //     align-items: center;
+  //     color: #545454;
+  // }
+  .residence-address {
+      width: 153px;
+      height: 34px;
+      font-family: 'Satoshi';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 121%;
+      /* or 17px */
+
+      display: flex;
+      align-items: center;
+
+      /* Grey/2 */
+      color: #545454;
+  }
+
+  .resume_data {
+    margin: 15px;
+    width: 32px;
+    height: 18px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    align-items: center;
+    letter-spacing: -0.06em;
+
+  }
+  
+  .img-entry {
+    margin: 5px;
+    
+  }
+  .activity-time {
+    font-weight: 700;
   }
   
 `;
@@ -79,28 +140,14 @@ const ActivityTable = () => {
   const PerData = () => {
     return (
       <TableFrame>
-        <div className="team-members">
-          <div className="scrollable_table">
+        <div>
+          <div className="activity_table">
             <table>
               <thead>
-                <tr>
-                  {/* <th className="checkmarking"> */}
-                    {/* CUSTOM CHECKBOX */}
-                    {/* <div class="cntr">
-                      <label for="resume" class="label-cbx">
-                        <input id="resume" type="checkbox" class="invisible" />
-                        <div class="checkbox">
-                          <svg width="20px" height="20px" viewBox="0 0 20 20">
-                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                            <polyline points="4 11 8 15 16 6"></polyline>
-                          </svg>
-                        </div>
-                      </label>
-                    </div>
-                  </th> */}
+                <tr className="activity_heading">
+              
                   <th>Residence Name</th>
                   <th>Email</th>
-                  {/* <th>Acess Code</th> */}
                   <th>Residence Address</th>
                   <th>Date and Time</th>
                   <th>Action</th>
@@ -120,51 +167,38 @@ const ActivityTable = () => {
                   .slice()
                   .map((data) => {
                     return (
-                      <tr>
-                        {/* <td className="checkmarking"> */}
-                          {/* CUSTOM CHECKBOX */}
-                          {/* <div class="cntr">
-                            <label for={data.id} class="label-cbx">
-                              <input
-                                id={data.id}
-                                type="checkbox"
-                                class="invisible"
-                              />
-                              <div class="checkbox">
-                                <svg
-                                  width="20px"
-                                  height="20px"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                  <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                              </div>
-                            </label>
-                          </div> */}
-                        {/* </td> */}
-                        <td>
-                          {/* <div className="img-avatar">                     
-                          </div> */}
+                      // <div className="utils" key={data.id}>
+                      <tr>                
+                        <td>                     
                             <div className="user-name">
                               {data.last_name} {data.first_name}
                             </div>
                         </td>
 
-                        <td>{data.email}</td>
-
-                        {/* <td className="resume_data">
-                          {data["Access code"]}                       
-                          </td> */}
-                        <td className="resume_data">
+                        <td>{data.email}</td>                  
+                        <td className="residence-address">
                           {data.address}                       
                           </td>
-                        <td className="resume_data">
-                          {data.date}                       
+                        <td >
+                           <div className="date-time">
+                               {data.date}
+                            </div>
+                           <div className="activity-time">
+                               {data.time}
+                            </div>
+                                                                    
                           </td>
-                        <td className="resume_data"> <img src={SVGs.ActivitySvg} alt="" /> </td>
+                        <td className="resume_data"> 
+                            <div className="img-entry">
+                             <img src={SVGs.ActivitySvg}  />
+                            </div>
+                            <div className="img-entry">
+                             <img  src={SVGs.ActivityEntry} />
+                            </div>
+                        </td>
                        
                       </tr>
+                    
                     );
                   })}
               </tbody>
@@ -189,7 +223,7 @@ const ActivityTable = () => {
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Activity Log</h3>
+        <h3>Activity Log: Admin</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">

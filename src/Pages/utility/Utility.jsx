@@ -111,6 +111,7 @@ const Utility = () => {
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
+  const [ utilsData, setUtilsData ] = useState([datatableUsers]);
 
   const PerPageChange = (value) => {
     setSize(value);
@@ -147,6 +148,18 @@ const Utility = () => {
     }
     return originalElement;
   };
+
+   const handleEdit = (e) => {
+    console.log("edited")
+
+   }
+
+   const handleDelete = (id) => {
+    const newList = utilsData.filter((l) => l.id !== id )
+    setUtilsData(newList)
+   }
+
+
   const PerData = () => {
     return (
       <TableFrame>
@@ -165,7 +178,7 @@ const Utility = () => {
                   .slice()
                   .map((data) => {
                     return (
-                        <div className="utils">
+                        <div className="utils" key={data.id}>
 
                             <div className="util-payment">
                               <img src={Imgs.PayStack} alt="" />
@@ -179,8 +192,8 @@ const Utility = () => {
                               </div>
                               </div>
                               <div className="btn">
-                                <a className="edit-btn">Edit</a>
-                                <a className="del-btn">Delete</a>
+                                <span className="edit-btn" onClick={() => handleEdit()}>Edit</span>
+                                <span className="del-btn" onClick={() => handleDelete(data.id)}>Delete</span>
                                </div>
                             </div>
                         

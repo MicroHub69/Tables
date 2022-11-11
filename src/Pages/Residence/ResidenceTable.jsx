@@ -7,7 +7,24 @@ import SelectDrop from "../../components/Select";
 import { SVGs } from "../../assets/svgs/SVGs";
 
 const TableFrame = styled.div`
-  // background-color: yellow !important;
+
+.scrollable_table {
+  font-family: 'Satoshi';
+  margin-left: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  display: flex;
+  align-items: center;
+  /* Grey/2 */ 
+  color: #545454;
+}
+
+.scrollable_table tr {
+  margin-left: 20px;
+}
+
   .img-avatar img {
     width: 38px;
     height: 38px;
@@ -19,16 +36,43 @@ const TableFrame = styled.div`
   }
   .user-name {
     margin-left: 10px;
+    width: 134px;
+    height: 23px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.06em;
+
+    /* Grey/1 */
+    color: #111111;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
   }
   .team-members {
     // display: flex;
     // justify-content: space-between;
     margin-top: 40px;
   }
-  .team {
+
+  .contact {
+    margin: 5px;
     display: flex;
-    justify-content: space-between;
   }
+  .contact a{
+    margin: 8px;
+    width: 30px;
+    height: 30px;
+   
+  }
+ 
   
 `;
 
@@ -80,27 +124,12 @@ const ResidenceTable = () => {
   const PerData = () => {
     return (
       <TableFrame>
-        <div className="team-members">
+        <div>
           <div className="scrollable_table">
             <table>
               <thead>
                 <tr>
-                  <th className="checkmarking">
-                    {/* CUSTOM CHECKBOX */}
-                    <div class="cntr">
-                      <label for="resume" class="label-cbx">
-                        <input id="resume" type="checkbox" class="invisible" />
-                        <div class="checkbox">
-                          <svg width="20px" height="20px" viewBox="0 0 20 20">
-                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                            <polyline points="4 11 8 15 16 6"></polyline>
-                          </svg>
-                        </div>
-                      </label>
-                    </div>
-                  </th>
-                  {/* <th>Name</th> */}
-                  {/* <th></th> */}
+                 
                   <th>Residence ID</th>
                   <th>Address</th>
                   <th>Contact</th>
@@ -122,28 +151,6 @@ const ResidenceTable = () => {
                   .map((data) => {
                     return (
                       <tr>
-                        <td className="checkmarking">
-                          {/* CUSTOM CHECKBOX */}
-                          <div class="cntr">
-                            <label for={data.id} class="label-cbx">
-                              <input
-                                id={data.id}
-                                type="checkbox"
-                                class="invisible"
-                              />
-                              <div class="checkbox">
-                                <svg
-                                  width="20px"
-                                  height="20px"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-                                  <polyline points="4 11 8 15 16 6"></polyline>
-                                </svg>
-                              </div>
-                            </label>
-                          </div>
-                        </td>
                         <td>
                           <div className="img-avatar">
                             <img
@@ -159,23 +166,19 @@ const ResidenceTable = () => {
 
                         <td>{data.adress}</td>
 
-                        <td className="resume_data">
-                          <div className="contact-mail">
-                          <a href="tel:5554280940">
-                            {data.phone}
-                          <img src={SVGs} alt=""  />
-                          </a>
-
-                          
+                        <td className="contact_data">
+                          <div className="contact">
+                            <a href="tel:5554280940" >
+                              <img src={SVGs.Call} alt=""  />
+                            </a>
+                            <a a href = "mailto:abc@example.com?subject = Feedback&body = Message" >
+                              <img src={SVGs.Email} alt=""  />
+                            </a>                   
                           </div>                       
-                          <div className="contact-tel">
-                          <a href = "mailto:abc@example.com?subject = Feedback&body = Message">Send Feedback</a>
-                          <img src={SVGs} alt=""  />                         
-                          </div>                       
+                        
                           </td>
                         <td className="resume_data"> <SelectDrop /> </td>
-                        {/* <td className="resume_data">{data.status}</td> */}
-                        {/* <td>{data.status}</td> */}
+                        
                       </tr>
                     );
                   })}
@@ -198,10 +201,11 @@ const ResidenceTable = () => {
       </TableFrame>
     );
   };
+  
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Residence</h3>
+        <h3>Residence Table Admin</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">
