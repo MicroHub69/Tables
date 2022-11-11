@@ -1,0 +1,15 @@
+[{"id":1, "payment_method":"paystack","acct_details":"0239023932","price":"200,000","payment_reason":"service charge"},
+{"id":2,"payment_method":"BuyPower","acct_details":"0239023932","price":"350,000","payment_reason":"power & electricity"},
+{"id":3,"payment_method":"paystack","acct_details":"0239023932","price":"237,000","payment_reason":"service charge"},
+{"id":4,"payment_method":"BuyPower","acct_details":"0239023932","price":"567,000","payment_reason":"power & electricity"},
+{"id":5,"payment_method":"paystack","acct_details":"0239023932","price":"107,000","payment_reason":"service charge"},
+{"id":6,"payment_method":"BuyPower","acct_details":"0239023932","price":"237,000","payment_reason":"power & electricity"},
+{"id":7,"payment_method":"paystack","acct_details":"0239023932","price":"653,000","payment_reason":"service charge"},
+{"id":8,"payment_method":"BuyPower","acct_details":"0239023932","price":"237,000","payment_reason":"service charge"},
+{"id":9,"payment_method":"paystack","acct_details":"0239023932","price":"337,000","payment_reason":"power & electricity"},
+{"id":10,"payment_method":"paystack","acct_details":"0239023932","price":"237,000","payment_reason":"service charge"},
+{"id":11,"payment_method":"BuyPower","acct_details":"0239023932","price":"937,000","payment_reason":"power & electricity"},
+{"id":12,"payment_method":"paystack","acct_details":"0239023932","price":"237,000","payment_reason":"power & electricity"},
+{"id":13,"payment_method":"paystack","acct_details":"0239023932","price":"237,000","payment_reason":"service charge"}
+
+]
