@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Pagination from "rc-pagination";
 import ActivityData from "./ActivityData.json";
 import SampleDrop from "../../components/Select";
@@ -89,14 +89,68 @@ const TableFrame = styled.div`
   .activity-time {
     font-weight: 700;
   }
-  
+`;
+
+const SwitchBtn = styled.div`
+  .switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background: #dfd9ea;
+    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+  .switch::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: #fafafa;
+    border-radius: 50%;
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28),
+      0 0 0 20px rgba(128, 128, 128, 0.1);
+  }
+  input:checked + .switch {
+    background: rgba(45, 75, 243, 1);
+  }
+  input:checked + .switch::before {
+    left: 27px;
+    background: #fff;
+  }
+  input:checked + .switch:active::before {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+  }
 `;
 
 const ActivityTable = () => {
   const [selected, setSelected] = useState("Fiter by:");
-  // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
-  // ======STATES FOR PAGINATION
+  const [isChecked, setIsChecked] = useState(false);
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+
+    // 👇️ this is the checkbox itself
+    console.log(event.target);
+
+    // 👇️ this is the checked value of the field
+    console.log(event.target.checked);
+  };
+
+  // ======
+  // 👇️ STATES FOR PAGINATION
   const datatableUsers = ActivityData;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
@@ -137,6 +191,7 @@ const ActivityTable = () => {
     }
     return originalElement;
   };
+
   const PerData = () => {
     return (
       <TableFrame>
@@ -144,8 +199,12 @@ const ActivityTable = () => {
           <div className="activity_table">
             <table>
               <thead>
+<<<<<<< HEAD
                 <tr className="activity_heading">
               
+=======
+                <tr>
+>>>>>>> 8f7310c75b08a40472741231aec99888be70c476
                   <th>Residence Name</th>
                   <th>Email</th>
                   <th>Residence Address</th>
@@ -159,22 +218,31 @@ const ActivityTable = () => {
                     if (searchInput === "") {
                       return val;
                     } else if (
-                      val.name.toLowerCase().includes(searchInput.toLowerCase())
+                      val.first_name
+                        .toLowerCase()
+                        .includes(searchInput.toLowerCase())
                     ) {
                       return val;
                     }
                   })
                   .slice()
-                  .map((data) => {
+                  .map((item) => {
                     return (
+<<<<<<< HEAD
                       // <div className="utils" key={data.id}>
                       <tr>                
                         <td>                     
+=======
+                      <tr>
+                        <td>
+                          <div className="img-avatar">
+>>>>>>> 8f7310c75b08a40472741231aec99888be70c476
                             <div className="user-name">
-                              {data.last_name} {data.first_name}
+                              {item.last_name} {item.first_name}
                             </div>
                         </td>
 
+<<<<<<< HEAD
                         <td>{data.email}</td>                  
                         <td className="residence-address">
                           {data.address}                       
@@ -197,6 +265,31 @@ const ActivityTable = () => {
                             </div>
                         </td>
                        
+=======
+                        <td>{item.email}</td>
+
+                        <td className="resume_data">{item["Access code"]}</td>
+                        <td className="resume_data">{item.address}</td>
+                        <td className="resume_data">{item.dateTime}</td>
+                        <td className="resume_data">
+                          <SwitchBtn>
+                            <input
+                              value=""
+                              style={{ margin: "20px" }}
+                              type="checkbox"
+                              id={item.id}
+                              onChange={handleChange}
+                              checked={isChecked}
+                            />
+
+                            <label class="switch" htmlFor={item.id}></label>
+                          </SwitchBtn>{" "}
+                          {/* <SelectDrop
+                            selected={selected}
+                            setSelected={setSelected}
+                          />{" "} */}
+                        </td>
+>>>>>>> 8f7310c75b08a40472741231aec99888be70c476
                       </tr>
                     
                     );
