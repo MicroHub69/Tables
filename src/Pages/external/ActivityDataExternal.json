@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "first_name": "Pepita",
     "last_name": "Steinham",
@@ -8,19 +9,23 @@
     "date": "11/24/2021",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "25999 Little Fleur Alley"
-  }, {
+    "destination": "25999 Little Fleur Alley",
+    "category": "Pending"
+  },
+  {
     "id": 2,
     "first_name": "Astrix",
     "last_name": "Thistleton",
-    "email": "athistleton1@comsenz.com",
+    "email": "athistleton1@comsenz.,com",
     "mobile": "08121215676",
     "time": "4:50 AM",
     "date": "7/24/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "22636 Doe Crossing Way"
-  }, {
+    "destination": "22636 Doe Crossing Way",
+    "category": "Resolved"
+  },
+  {
     "id": 3,
     "first_name": "Celestine",
     "last_name": "Aylett",
@@ -30,8 +35,10 @@
     "date": "4/12/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "061 Blaine Avenue"
-  }, {
+    "destination": "061 Blaine Avenue",
+    "category": "Resolved"
+  },
+  {
     "id": 4,
     "first_name": "Ange",
     "last_name": "Pepin",
@@ -41,8 +48,10 @@
     "date": "4/12/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "406 Mcguire Lane"
-  }, {
+    "destination": "406 Mcguire Lane",
+    "category": "Resolved"
+  },
+  {
     "id": 5,
     "first_name": "Demetra",
     "last_name": "Sired",
@@ -52,8 +61,10 @@
     "date": "11/16/2021",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "34572 Pierstorff Plaza"
-  }, {
+    "destination": "34572 Pierstorff Plaza",
+    "category": "Resolved"
+  },
+  {
     "id": 6,
     "first_name": "Gweneth",
     "last_name": "Setterfield",
@@ -63,8 +74,10 @@
     "date": "2/1/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "3274 Waubesa Alley"
-  }, {
+    "destination": "3274 Waubesa Alley",
+    "category": "Resolved"
+  },
+  {
     "id": 7,
     "first_name": "Gabriel",
     "last_name": "Ost",
@@ -74,8 +87,10 @@
     "date": "10/3/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "7094 Brentwood Park"
-  }, {
+    "destination": "7094 Brentwood Park",
+    "category": "Pending"
+  },
+  {
     "id": 8,
     "first_name": "Sarita",
     "last_name": "Diaper",
@@ -85,8 +100,10 @@
     "date": "10/12/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "39 Westport Alley"
-  }, {
+    "destination": "39 Westport Alley",
+    "category": "Pending"
+  },
+  {
     "id": 9,
     "first_name": "Leigh",
     "last_name": "Messum",
@@ -96,8 +113,10 @@
     "date": "9/13/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "85917 Little Fleur Place"
-  }, {
+    "destination": "85917 Little Fl,eur Place",
+    "category": "Resolved"
+  },
+  {
     "id": 10,
     "first_name": "Ari",
     "last_name": "Greenset",
@@ -107,8 +126,10 @@
     "date": "10/28/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "52 Larry Lane"
-  }, {
+    "destination": "52 Larry Lane",
+    "category": "Pending"
+  },
+  {
     "id": 11,
     "first_name": "Ynes",
     "last_name": "Lamberti",
@@ -118,8 +139,10 @@
     "date": "4/13/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "388 Evergreen Crossing"
-  }, {
+    "destination": "388 Evergreen Crossing",
+    "category": "Resolved"
+  },
+  {
     "id": 12,
     "first_name": "Waylan",
     "last_name": "Hammerstone",
@@ -129,8 +152,10 @@
     "date": "4/26/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "37551 Lyons Court"
-  }, {
+    "destination": "37551 Lyons Court",
+    "category": "Resolved"
+  },
+  {
     "id": 13,
     "first_name": "Dory",
     "last_name": "Cullingworth",
@@ -140,8 +165,10 @@
     "date": "3/14/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "543 West Court"
-  }, {
+    "destination": "543 West Court",
+    "category": "Pending"
+  },
+  {
     "id": 14,
     "first_name": "Jaime",
     "last_name": "Bloodworthe",
@@ -151,8 +178,10 @@
     "date": "6/26/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "9 Ilene Circle"
-  }, {
+    "destination": "9 Ilene Circle",
+    "category": "Resolved"
+  },
+  {
     "id": 15,
     "first_name": "Miriam",
     "last_name": "Von Welldun",
@@ -162,8 +191,10 @@
     "date": "3/5/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "165 Anthes Junction"
-  }, {
+    "destination": "165 Anthes Junction",
+    "category": "Resolved"
+  },
+  {
     "id": 16,
     "first_name": "Ian",
     "last_name": "Burrass",
@@ -173,8 +204,10 @@
     "date": "7/15/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "5 Colorado Hill"
-  }, {
+    "destination": "5 Colorado Hill",
+    "category": "Pending"
+  },
+  {
     "id": 17,
     "first_name": "Jarid",
     "last_name": "Bresson",
@@ -184,8 +217,10 @@
     "date": "7/16/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "6 Lighthouse Bay Court"
-  }, {
+    "destination": "6 Lighthouse Bay Court",
+    "category": "Resolved"
+  },
+  {
     "id": 18,
     "first_name": "Bran",
     "last_name": "Work",
@@ -195,8 +230,10 @@
     "date": "7/28/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "46782 Toban Pass"
-  }, {
+    "destination": "46782 Toban Pass",
+    "category": "Pending"
+  },
+  {
     "id": 19,
     "first_name": "Cordelia",
     "last_name": "Fuchs",
@@ -206,8 +243,10 @@
     "date": "11/23/2021",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "840 Hovde Pass"
-  }, {
+    "destination": "840 Hovde Pass",
+    "category": "Resolved"
+  },
+  {
     "id": 20,
     "first_name": "Camala",
     "last_name": "Callaby",
@@ -217,8 +256,10 @@
     "date": "10/10/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "8 Merry Avenue"
-  }, {
+    "destination": "8 Merry Avenue",
+    "category": "Resolved"
+  },
+  {
     "id": 21,
     "first_name": "Scotti",
     "last_name": "Leadley",
@@ -228,8 +269,10 @@
     "date": "6/7/2022",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "4 New Castle Plaza"
-  }, {
+    "destination": "4 New Castle Plaza",
+    "category": "Resolved"
+  },
+  {
     "id": 22,
     "first_name": "Mildred",
     "last_name": "Grollmann",
@@ -239,8 +282,10 @@
     "date": "11/13/2021",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "3 Prairieview Park"
-  }, {
+    "destination": "3 Prairieview Park",
+    "category": "Pending"
+  },
+  {
     "id": 23,
     "first_name": "Angele",
     "last_name": "Rumin",
@@ -250,8 +295,10 @@
     "date": "10/13/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "75 Golf View Court"
-  }, {
+    "destination": "75 Golf View Court",
+    "category": "Resolved"
+  },
+  {
     "id": 24,
     "first_name": "Jeralee",
     "last_name": "Dri",
@@ -261,8 +308,10 @@
     "date": "8/4/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "6 Vermont Lane"
-  }, {
+    "destination": "6 Vermont Lane",
+    "category": "Resolved"
+  },
+  {
     "id": 25,
     "first_name": "Daniel",
     "last_name": "Saill",
@@ -272,8 +321,10 @@
     "date": "9/2/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "0255 Schlimgen Park"
-  }, {
+    "destination": "0255 Schlimgen Park",
+    "category": "Resolved"
+  },
+  {
     "id": 26,
     "first_name": "Mattias",
     "last_name": "Limbourne",
@@ -283,8 +334,10 @@
     "date": "9/13/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "4 Pond Hill"
-  }, {
+    "destination": "4 Pond Hill",
+    "category": "Resolved"
+  },
+  {
     "id": 27,
     "first_name": "Lissa",
     "last_name": "Kinze",
@@ -294,8 +347,10 @@
     "date": "6/12/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "6 John Wall Way"
-  }, {
+    "destination": "6 John Wall Way",
+    "category": "Pending"
+  },
+  {
     "id": 28,
     "first_name": "Mikey",
     "last_name": "McGeagh",
@@ -305,8 +360,10 @@
     "date": "3/25/2022",
     "access_type": "Vendor",
     "access_code": "PQY-3091",
-    "destination": "7274 John Wall Park"
-  }, {
+    "destination": "7274 John Wall Park",
+    "category": "Resolved"
+  },
+  {
     "id": 29,
     "first_name": "Darlene",
     "last_name": "Doumic",
@@ -316,8 +373,10 @@
     "date": "7/27/2022",
     "access_type": "Staff",
     "access_code": "PQY-3091",
-    "destination": "1 Gerald Point"
-  }, {
+    "destination": "1 Gerald Point",
+    "category": "Resolved"
+  },
+  {
     "id": 30,
     "first_name": "Estrella",
     "last_name": "Fleckney",
@@ -327,5 +386,7 @@
     "date": "11/26/2021",
     "access_type": "Residence",
     "access_code": "PQY-3091",
-    "destination": "7 Esch Pass"
-  }]
+    "destination": "7 Esch Pass",
+    "category": "Resolved"
+  }
+]
