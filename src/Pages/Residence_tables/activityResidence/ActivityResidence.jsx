@@ -1,35 +1,32 @@
-import React, { useEffect, useState } from "react";
-import Pagination from "rc-pagination";
-import ActivityResidenceData from './ActivityResidenceData.json'
-import styled from "styled-components";
+import React, { useState } from "react";
+import ActivityResidenceData from "./ActivityResidenceData.json";
 import { SVGs } from "../../../assets/svgs/SVGs";
-
+import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
+import styled from "styled-components";
 
 const TableFrame = styled.div`
-.activity_heading {
-  font-family: 'Satoshi';
-  margin: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 121%;
-  color: #545454;
+  .activity_heading {
+    font-family: "Satoshi";
+    margin: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 121%;
+    color: #545454;
+  }
+  .activity_table {
+    font-family: "Satoshi";
+    margin: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 121%;
+    display: flex;
+    align-items: center;
 
-}
-.activity_table {
-  font-family: 'Satoshi';
-  margin: 20px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 121%;
-  display: flex;
-  align-items: center;
-  
-  /* Grey/2 */ 
-  color: #545454;
-  
-}
+    /* Grey/2 */
+    color: #545454;
+  }
   .user-name {
     margin-left: 10px;
   }
@@ -50,27 +47,27 @@ const TableFrame = styled.div`
   //     color: #545454;
   // }
   .residence-address {
-      width: 153px;
-      height: 34px;
-      font-family: 'Satoshi';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 121%;
-      /* or 17px */
+    width: 153px;
+    height: 34px;
+    font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 121%;
+    /* or 17px */
 
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
 
-      /* Grey/2 */
-      color: #545454;
+    /* Grey/2 */
+    color: #545454;
   }
 
   .resume_data {
     margin: 15px;
     width: 32px;
     height: 18px;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -79,12 +76,10 @@ const TableFrame = styled.div`
     // justify-content: space-between;
     align-items: center;
     letter-spacing: -0.06em;
-
   }
-  
+
   .img-entry {
     margin: 5px;
-    
   }
   .activity-time {
     font-weight: 700;
@@ -106,6 +101,7 @@ const SwitchBtn = styled.div`
   input {
     display: none;
   }
+
   .switch::before {
     content: "";
     position: absolute;
@@ -135,184 +131,386 @@ const SwitchBtn = styled.div`
   }
 `;
 
-const ActivityTable = () => {
-  const [selected, setSelected] = useState("Fiter by:");
-  const [searchInput, setSearchInput] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
-  const handleChange = (event) => {
-    setIsChecked(event.target.checked);
+function ActivityResidence() {
+  const [events, setEvents] = useState(ActivityResidenceData.slice(0, 20));
+  const [value, setvalue] = useState("");
 
-    // 👇️ this is the checkbox itself
-    console.log(event.target);
+  const [pageNumber, setPageNumber] = useState(0); // state representing the page we are on
+  const [searchTerm, setSearchTerm] = useState("");
+  const [openModal, setOpenModal] = useState(false); // state for Modal
+  const [edit, setEdit] = useState(false); // state for Modal
+  const [selected, setSelected] = useState("Filter");
+  const [activeIndex, setActiveIndex] = useState(1);
+  const handleClick = (index) => setActiveIndex(index);
+  const checkActive = (index, className) =>
+    activeIndex === index ? className : "";
 
-    // 👇️ this is the checked value of the field
-    console.log(event.target.checked);
+  /** ======to do
+   * 1. Handle all form event with handleChange function
+   * 2. No need for Filter as all blog display at one.Navigate using the pagination
+   */
+
+  const handleOnchange = (val) => setvalue(val);
+  // const [ API, setData ] = useState(API)
+  const eventsPerPage = 9;
+  const pagesVisited = pageNumber * eventsPerPage;
+
+  const filterEvents = (catItem) => {
+    const result = ActivityResidenceData.filter((curDate) => {
+      return curDate.category === catItem;
+    });
+    setEvents(result);
   };
 
-  // ======
-  // 👇️ STATES FOR PAGINATION
-  const datatableUsers = ActivityResidenceData;
-  const [perPage, setPerPage] = useState(8);
-  const [size, setSize] = useState(perPage);
-  const [current, setCurrent] = useState(1);
+  const displayEvents = events
+    .filter((event) => {
+      if (searchTerm === "") {
+        return event;
+      } else if (
+        event.residence_id.toLowerCase().includes(searchTerm.toLowerCase())
+      ) {
+        return event;
+      }
+    })
+    .slice(pagesVisited, pagesVisited + eventsPerPage)
+    .map((event) => {
+      const { id, residence_id, email, mobile, date, time, account_type } =
+        event;
 
-  const PerPageChange = (value) => {
-    setSize(value);
-    const newPerPage = Math.ceil(datatableUsers.length / value);
-    if (current > newPerPage) {
-      setCurrent(newPerPage);
-    }
-  };
-
-  const getData = (current, pageSize) => {
-    // Normally you should get the data from the server
-    return datatableUsers.slice((current - 1) * pageSize, current * pageSize);
-  };
-
-  const PaginationChange = (page, pageSize) => {
-    setCurrent(page);
-    setSize(pageSize);
-  };
-
-  const PrevNextArrow = (current, type, originalElement) => {
-    if (type === "prev") {
       return (
-        <button>
-          <i className="fa fa-angle-double-left"></i>
-        </button>
+        <tr>
+          <td>
+            <div className="img-avatar">
+              <div className="user-name">{residence_id}</div>
+            </div>
+          </td>
+          <td>{email}</td>
+          <td className="residence-address">{mobile}</td>
+          <td>{account_type}</td>
+          <td>
+            <div className="date-time">{date}</div>
+            <div className="activity-time">{time}</div>
+          </td>
+          <td className="resume_data">
+            <div className="img-entry">
+              <img src={SVGs.ActivitySvg} />
+            </div>
+            <div className="img-entry">
+              <img src={SVGs.ActivityEntry} />
+            </div>
+          </td>
+        </tr>
       );
-    }
-    if (type === "next") {
-      return (
-        <button>
-          <i className="fa fa-angle-double-right"></i>
-        </button>
-      );
-    }
-    return originalElement;
+    });
+
+  // display items from 1 -6
+
+  const pageCount = Math.ceil(events.length / eventsPerPage); // Rounding up
+
+  const changePage = ({ selected }) => {
+    // selected the number for the page we want to move too
+    setPageNumber(selected);
   };
 
-  const PerData = () => {
-    return (
-      <TableFrame>
-        <div>
-          <div className="activity_table">
-            <table>
-              <thead>
-                <tr className="activity_heading">
-                </tr>
-                <tr>
-                  <th>Residence Name</th>
-                  <th>Email</th>
-                  <th>Mobile</th>
-                  <th>Account Type</th>
-                  <th>Date and Time</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {getData(current, size)
-                  .filter((val) => {
-                    if (searchInput === "") {
-                      return val;
-                    } else if (
-                      val.first_name
-                        .toLowerCase()
-                        .includes(searchInput.toLowerCase())
-                    ) {
-                      return val;
-                    }
-                  })
-                  .slice()
-                  .map((item) => {
-                    return (
-                                        
-                      <tr>
-                        <td>
-                          <div className="img-avatar">
-                            <div className="user-name">
-                              {item.residence_id}
-                            </div>
-                          </div>  
-                        </td>
-
-                        <td>{item.email}</td>                  
-                        <td className="residence-address">
-                          {item.mobile}                       
-                          </td>
-
-                        <td>{item.account_type}</td>
-
-                        <td >
-                           <div className="date-time">
-                               {item.date}
-                            </div>
-                           <div className="activity-time">
-                               {item.time}
-                            </div>
-                                                                    
-                          </td>
-                        <td className="resume_data"> 
-                            <div className="img-entry">
-                             <img src={SVGs.ActivitySvg}  />
-                            </div>
-                            <div className="img-entry">
-                             <img  src={SVGs.ActivityEntry} />
-                            </div>
-                        </td>
-                       
-
-                       
-                      </tr>
-                    
-                    );
-                  })}
-              </tbody>
-            </table>
-          </div>
-          <Pagination
-            key={ActivityResidenceData.id}
-            className="pagination-data"
-            // showTotal={(total, range) => `${range[0]}-${range[1]} / ${total}`}
-            onChange={PaginationChange}
-            total={datatableUsers.length}
-            current={current}
-            pageSize={size}
-            showSizeChanger={false}
-            itemRender={PrevNextArrow}
-            onShowSizeChange={PerPageChange}
-          />
-        </div>
-      </TableFrame>
-    );
-  };
   return (
-    <section className="leads_cards">
-      <div className="lead-tt">
-        <h3>Activity Log: Residence</h3>
-        {/* <p>Manage What users can do or see in the project</p> */}
-        <div className="fiterCase">
-          <div class="search_set">
-            <img src="https://www.svgrepo.com/show/13682/search.svg" alt="" />
-            <input
-              type="text"
-              placeholder="Search"
-              value={searchInput}
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-              }}
+    <>
+      <section className="change_ratio">
+        <div className="selected_tab">
+          <div className="dashboard_container">
+            Activity residence
+            <div className="event-container">
+              <HandleSearchAndTab>
+                <div className="tabs">
+                  <span
+                    className={`tab ${checkActive(1, "active")}`}
+                    onClick={() => handleClick(1)}
+                  >
+                    <button onClick={(e) => setEvents(ActivityResidenceData)}>
+                      All
+                    </button>
+                  </span>
+
+                  <span
+                    className={`tab ${checkActive(2, "active")}`}
+                    onClick={() => handleClick(2)}
+                  >
+                    <button
+                      className="btn"
+                      onClick={() => filterEvents("Pending")}
+                    >
+                      Pending
+                    </button>
+                  </span>
+                  <span
+                    className={`tab ${checkActive(3, "active")}`}
+                    onClick={() => handleClick(3)}
+                  >
+                    <button
+                      className="btn"
+                      onClick={() => filterEvents("Resolved")}
+                    >
+                      Resolved
+                    </button>
+                  </span>
+                </div>
+                <div className="event-input">
+                  <div class="search_set">
+                    <img
+                      src="https://www.svgrepo.com/show/13682/search.svg"
+                      alt=""
+                    />
+                    <input
+                      className="eventt"
+                      type="text"
+                      name="name"
+                      placeholder="Search"
+                      onChange={(event) => {
+                        setSearchTerm(event.target.value);
+                      }}
+                    />
+                  </div>
+
+                  {/* <FilterBy selected={selected} setSelected={setSelected} />
+                <button
+                  className="important-btn"
+                  onClick={() => setOpenModal(true)}
+                >
+                  Create
+                </button> */}
+                </div>
+              </HandleSearchAndTab>
+            </div>
+            <div className="panels">
+              <div className={`panel ${checkActive(1, "active")}`}>
+                <TableFrame>
+                  <div>
+                    <div className="activity_table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Residence Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Account Type</th>
+                            <th>Date and Time</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody> {displayEvents} </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </TableFrame>
+              </div>
+            </div>
+            <ReactPaginate
+              previousLabel={"<"}
+              nextLabel={">"}
+              pageCount={pageCount}
+              onPageChange={changePage}
+              containerClassName={"paginationButtons"}
+              previousLinkClassName={"previousButton"}
+              nextLinkClassName={"nextButton"}
+              disabledClassName={"paginationDisabled"}
+              activeClassName={"paginationActive"}
             />
           </div>
         </div>
-      </div>
+      </section>
+    </>
+  );
+}
 
-      <div className="">
-        <PerData />
+export default ActivityResidence;
+
+const Action = ({ selected, setSelected }) => {
+  const [isActive, setIsActive] = useState(false);
+  const options = ["Resolved", "Pending"];
+  return (
+    <div className="select_me">
+      <div className="select-btn" onClick={(e) => setIsActive(!isActive)}>
+        <input type="text" value={selected} readOnly />
+
+        <img
+          src="https://www.svgrepo.com/show/356209/chevron-down.svg"
+          alt="v"
+        />
       </div>
-    </section>
+      {isActive && (
+        <div className="select_content">
+          {options.map((option, index) => (
+            <div
+              className="select_items"
+              onClick={(e) => {
+                setSelected(option);
+                setIsActive(false);
+              }}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
-export default ActivityTable;
+const HandleSearchAndTab = styled.section`
+  .container {
+    margin-bottom: 20px;
+  }
+  .normal_tab {
+    background: transparent;
+  }
+  .event-input {
+    max-width: 675px;
+  }
+  @media (min-width: 760px) {
+    display: flex;
+    justify-content: space-between;
+    .event-input {
+      display: flex;
+      justify-content: space-between;
+      //   width: 57%;
+      .select_me {
+        margin-left: 10px;
+        width: auto !important;
+      }
+      button {
+        margin-top: 0;
+        height: 45px;
+      }
+      .event-select {
+        width: 20%;
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    .event-input {
+      .event-select {
+        display: none;
+      }
+    }
+  }
+  .tabs {
+    margin: 0;
+    margin-bottom: 30px;
+    .tab {
+      margin: 0;
+      height: 45px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      min-width: 100px;
+      padding: 5px 20px;
+      text-align: center;
+      margin-right: 15px;
+      border-bottom: 3px solid #c0c0c0;
+      button {
+        margin: 0;
+        padding: 0 !important;
+        padding: 10px;
+        //styleName: Web/Small Copy;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .active {
+      background: transparent;
+      border-bottom: 3px solid #2d4bf3;
+      button {
+        color: #2d4bf3;
+      }
+    }
+  }
+  .normal_tab.add_tape {
+    border-bottom: 2px solid yellow;
+  }
+`;
+// let Wrapper = styled.section`
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
 
+//   @media (max-width: 400px) {
+//     .eachAdminBlog {
+//       width: 100%;
+//     }
+//   }
+//   @media (min-width: 720px) {
+//     .perComponent {
+//       width: 48.5%;
+//     }
+//   }
+//   @media (min-width: 1200px) {
+//     .perComponent {
+//       width: 32.5%;
+//     }
+//   }
 
+//   }
+// `;
+
+const Complaint = styled.div`
+  background: #f6f6f6;
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  .handleFlow {
+    height: 150px;
+    overflow: auto;
+    margin: 20px 0;
+  }
+  .top_level {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+    .select_me {
+      max-width: 150px;
+      width: 100%;
+    }
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #999999;
+  }
+  .name_position {
+    margin-top: 15px;
+    display: flex;
+    img {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 7px;
+      span {
+        font-weight: 700;
+        color: #2d4bf3;
+        font-size: 14px;
+        margin-left: 10px;
+        line-height: 13px;
+        letter-spacing: -0.06em;
+      }
+    }
+  }
+`;

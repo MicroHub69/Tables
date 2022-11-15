@@ -6,13 +6,12 @@ import "./assets/css/table.css";
 // import ResidenceTable from "./Pages/admin/Residence/ResidenceTable";
 // import ActivityTable from "./Pages/admin/activityLog/ActivityTable";
 // import TransactionTable from "./Pages/admin/transaction/TransactionData";
-// import TransactionResidence from './Pages/Residence_tables/trasactionResidence/TrasactionResidence'
-// import  ResidenceTablesInResidence from './Pages/Residence_tables/residenceResidence/ResidenceTablesInResidence'
+// import TransactionResidence from "./Pages/Residence_tables/trasactionResidence/TrasactionResidence";
+// import ResidenceTablesInResidence from "./Pages/Residence_tables/residenceResidence/ResidenceTablesInResidence";
 // import ResidenceTable from "./Pages/Residence/ResidenceTable";
 // import LandingPage from "./Pages/Test";
-// import ActivityResidence from './Pages/Residence_tables/activityResidence/ActivityResidence';
-// import ActivityTableExternal from './Pages/external/ActivityTableExternal'
-import SuperAdminComplaint from './Pages/Exact'
+import ActivityResidence from "./Pages/Residence_tables/activityResidence/ActivityResidence";
+// import ActivityTableExternal from "./Pages/external/ActivityTableExternal";
 
 function App() {
   return (
@@ -20,18 +19,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route index element={<LandingPage />} /> */}
-          {/* <Route index element={<ActivityResidence />} /> */}
-          {/* <Route index element={<ActivityTableExternal />} /> */}
-          <Route index element={<SuperAdminComplaint />} />
+          <Route index element={<ActivityResidence />} />
           {/* <Route index element={<TransactionResidence />} /> */}
-          {/* <Route index element={< ResidenceTablesInResidence />} /> */}
-          {/* <Route index element={<ActivityTable />} /> */}
+          {/* <Route index element={<ResidenceTablesInResidence />} /> */}
           {/* <Route index element={<UtilityTable />} /> */}
           {/* <Route index element={<ResidenceTable />} /> */}
           {/* <Route index element={<ActivityTable />} /> */}
           {/* <Route index element={<TransactionTable />} /> */}
           {/* <Route index element={<ResidenceTable />} /> */}
           {/* <Route path="/table2" element={<NewTable />} /> */}
+          {/* <Route index element={<ActivityTableExternal />} /> */}
         </Routes>
       </BrowserRouter>
     </>

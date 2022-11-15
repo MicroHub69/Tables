@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "first_name": "Ilyssa",
     "last_name": "Andover",
@@ -8,8 +9,10 @@
     "date": "1/15/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 2,
     "first_name": "Stacia",
     "last_name": "Hefford",
@@ -19,8 +22,10 @@
     "date": "4/23/2022",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 3,
     "first_name": "Wiley",
     "last_name": "Rostern",
@@ -30,8 +35,10 @@
     "date": "3/12/2022",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 4,
     "first_name": "Harvey",
     "last_name": "Fain",
@@ -41,8 +48,10 @@
     "date": "8/31/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 5,
     "first_name": "Micheline",
     "last_name": "Doeg",
@@ -52,8 +61,10 @@
     "date": "1/10/2022",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 6,
     "first_name": "Laryssa",
     "last_name": "Wallworth",
@@ -63,8 +74,10 @@
     "date": "6/26/2022",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 7,
     "first_name": "Shari",
     "last_name": "Robjant",
@@ -74,8 +87,10 @@
     "date": "7/5/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 8,
     "first_name": "Daryle",
     "last_name": "Ashfull",
@@ -85,8 +100,10 @@
     "date": "5/1/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 9,
     "first_name": "Everard",
     "last_name": "Blew",
@@ -96,8 +113,10 @@
     "date": "5/22/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 10,
     "first_name": "Wendie",
     "last_name": "Huby",
@@ -107,8 +126,10 @@
     "date": "9/24/2022",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 11,
     "first_name": "Dewain",
     "last_name": "Trussler",
@@ -118,8 +139,10 @@
     "date": "2/5/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 12,
     "first_name": "Georg",
     "last_name": "Yanshin",
@@ -129,8 +152,10 @@
     "date": "2/17/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 13,
     "first_name": "Olenka",
     "last_name": "Vasin",
@@ -140,8 +165,10 @@
     "date": "3/19/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 14,
     "first_name": "Ilysa",
     "last_name": "Bleythin",
@@ -151,8 +178,10 @@
     "date": "4/28/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 15,
     "first_name": "Jolyn",
     "last_name": "Dundon",
@@ -162,8 +191,10 @@
     "date": "1/23/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 16,
     "first_name": "Giorgia",
     "last_name": "Hazelgreave",
@@ -173,8 +204,10 @@
     "date": "12/30/2021",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 17,
     "first_name": "Inigo",
     "last_name": "Scarman",
@@ -184,8 +217,10 @@
     "date": "4/27/2022",
     "ranking": "Secretary",
     "activate": "activate",
+    "category": "Pending",
     "deactivate": "Deactivate"
-  }, {
+  },
+  {
     "id": 18,
     "first_name": "Carola",
     "last_name": "Kenn",
@@ -195,8 +230,10 @@
     "date": "8/27/2022",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 19,
     "first_name": "Dawn",
     "last_name": "Langlais",
@@ -206,8 +243,10 @@
     "date": "12/2/2021",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 20,
     "first_name": "Brier",
     "last_name": "Hillock",
@@ -217,8 +256,10 @@
     "date": "12/14/2021",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 21,
     "first_name": "Aprilette",
     "last_name": "Leavy",
@@ -228,8 +269,10 @@
     "date": "8/30/2022",
     "ranking": "Caretaker",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 22,
     "first_name": "Clementius",
     "last_name": "Androck",
@@ -239,8 +282,10 @@
     "date": "12/30/2021",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 23,
     "first_name": "Evyn",
     "last_name": "Cheel",
@@ -250,8 +295,10 @@
     "date": "9/9/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 24,
     "first_name": "Luca",
     "last_name": "Posthill",
@@ -261,8 +308,10 @@
     "date": "6/29/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 25,
     "first_name": "Annabal",
     "last_name": "Rope",
@@ -272,8 +321,10 @@
     "date": "12/23/2021",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 26,
     "first_name": "Felice",
     "last_name": "Longstreet",
@@ -283,8 +334,10 @@
     "date": "10/24/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 27,
     "first_name": "Ingeborg",
     "last_name": "Jimpson",
@@ -294,8 +347,10 @@
     "date": "6/6/2022",
     "ranking": "Secretary",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 28,
     "first_name": "Levi",
     "last_name": "Anfrey",
@@ -305,8 +360,10 @@
     "date": "10/20/2022",
     "ranking": "Residence",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  },
+  {
     "id": 29,
     "first_name": "Patin",
     "last_name": "Ballingal",
@@ -316,8 +373,10 @@
     "date": "12/16/2021",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }, {
+    "deactivate": "Deactivate",
+    "category": "Pending"
+  },
+  {
     "id": 30,
     "first_name": "Stacey",
     "last_name": "Uff",
@@ -327,5 +386,7 @@
     "date": "3/8/2022",
     "ranking": "PRO",
     "activate": "activate",
-    "deactivate": "Deactivate"
-  }]
+    "deactivate": "Deactivate",
+    "category": "Resolved"
+  }
+]

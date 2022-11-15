@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-// import JsonData from '../Mock-API.json'
-// import API from "../Pages/TestData.json";
 import ActivityDataExternal from "./external/ActivityDataExternal.json";
 import { SVGs } from "../assets/svgs/SVGs";
-
 import ReactPaginate from "react-paginate"; //  Using react-paginate from the react library
 import styled from "styled-components";
 
@@ -370,6 +367,7 @@ const Action = ({ selected, setSelected }) => {
     </div>
   );
 };
+
 const HandleSearchAndTab = styled.section`
   .container {
     margin-bottom: 20px;

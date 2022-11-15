@@ -1,241 +1,302 @@
-[{
+[
+  {
     "id": 1,
     "residence_id": "81450b43",
     "mobile": "07012455665",
     "email": "gamys0@fc2.com",
     "account_type": "Staff",
     "date": "4/1/2022",
-    "time": "9:06 PM"
-  }, {
+    "time": "9:06 PM",
+    "category": "Pending"
+  },
+  {
     "id": 2,
     "residence_id": "9652e3bf",
     "mobile": "08035567123",
     "email": "mzipsell6@wp.com",
     "account_type": "Member",
     "date": "9/15/2022",
-    "time": "9:04 AM"
-  }, {
+    "time": "9:04 AM",
+    "category": "Resolved"
+  },
+  {
     "id": 3,
     "residence_id": "bb8640ad",
     "mobile": "08035567123",
     "email": "gamys0@fc2.com",
     "account_type": "Staff",
     "date": "3/1/2022",
-    "time": "8:18 PM"
-  }, {
+    "time": "8:18 PM",
+    "category": "Pending"
+  },
+  {
     "id": 4,
     "residence_id": "1ae28744",
     "mobile": "08124789432",
     "email": "mzipsell6@wp.com",
     "account_type": "Member",
     "date": "2/1/2022",
-    "time": "12:18 AM"
-  }, {
+    "time": "12:18 AM",
+    "category": "Resolved"
+  },
+  {
     "id": 5,
     "residence_id": "e72bd666-",
     "mobile": "08037891104",
     "email": "gamys0@fc2.com",
     "account_type": "Staff",
     "date": "3/12/2022",
-    "time": "3:33 PM"
-  }, {
+    "time": "3:33 PM",
+    "category": "Pending"
+  },
+  {
     "id": 6,
     "residence_id": "26c6a9f3",
     "mobile": "09034518909",
     "email": "mzipsell6@wp.com",
     "account_type": "Member",
     "date": "12/30/2021",
-    "time": "3:42 PM"
-  }, {
+    "time": "3:42 PM",
+    "category": "Pending"
+  },
+  {
     "id": 7,
     "residence_id": "c7f0fdae",
     "mobile": "07012455665",
     "email": "mzipsell6@wp.com",
     "account_type": "Staff",
     "date": "11/10/2022",
-    "time": "2:37 PM"
-  }, {
+    "time": "2:37 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 8,
     "residence_id": "7629145c",
     "mobile": "08035567123",
     "email": "mzipsell6@wp.com",
     "account_type": "Staff",
     "date": "11/23/2021",
-    "time": "5:37 PM"
-  }, {
+    "time": "5:37 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 9,
     "residence_id": "07b9537a",
     "mobile": "08124789432",
     "email": "gamys0@fc2.com",
     "account_type": "Member",
     "date": "10/24/2022",
-    "time": "6:40 PM"
-  }, {
+    "time": "6:40 PM",
+    "category": "Pending"
+  },
+  {
     "id": 10,
     "residence_id": "63c4aa04",
     "mobile": "08035567123",
     "email": "mzipsell6@wp.com",
     "account_type": "Staff",
     "date": "3/6/2022",
-    "time": "1:34 AM"
-  }, {
+    "time": "1:34 AM",
+    "category": "Resolved"
+  },
+  {
     "id": 11,
     "residence_id": "2106d7f1",
     "mobile": "09034518909",
     "email": "mzipsell6@wp.com",
     "account_type": "Member",
     "date": "2/13/2022",
-    "time": "11:40 AM"
-  }, {
+    "time": "11:40 AM",
+    "category": "Pending"
+  },
+  {
     "id": 12,
     "residence_id": "c393691ce",
     "mobile": "07012455665",
     "email": "mzipsell6@wp.com",
     "account_type": "Member",
     "date": "11/24/2021",
-    "time": "2:14 PM"
-  }, {
+    "time": "2:14 PM",
+    "category": "Pending"
+  },
+  {
     "id": 13,
     "residence_id": "a9efd3e0",
     "mobile": "09034518909",
     "email": "gamys0@fc2.com",
     "account_type": "Staff",
     "date": "3/30/2022",
-    "time": "7:07 AM"
-  }, {
+    "time": "7:07 AM",
+    "category": "Resolved"
+  },
+  {
     "id": 14,
     "residence_id": "138650ed",
     "mobile": "08035567123",
     "email": "mzipsell6@wp.com",
     "account_type": "Staff",
     "date": "11/28/2021",
-    "time": "9:28 PM"
-  }, {
+    "time": "9:28 PM",
+    "category": "Pending"
+  },
+  {
     "id": 15,
     "residence_id": "1d1fea5b",
     "mobile": "08037891104",
     "email": "gamys0@fc2.com",
     "account_type": "Member",
     "date": "12/15/2021",
-    "time": "7:53 PM"
-  }, {
+    "time": "7:53 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 16,
     "residence_id": "81ace4c7",
     "mobile": "07012455665",
     "email": "jhendrik4@pbs.org",
     "account_type": "Member",
     "date": "6/15/2022",
-    "time": "7:12 AM"
-  }, {
+    "time": "7:12 AM",
+    "category": "Resolved"
+  },
+  {
     "id": 17,
     "residence_id": "966e790b",
     "mobile": "09034518909",
     "email": "jhendrik4@pbs.org",
     "account_type": "Staff",
     "date": "8/4/2022",
-    "time": "1:08 PM"
-  }, {
+    "time": "1:08 PM",
+    "category": "Pending"
+  },
+  {
     "id": 18,
     "residence_id": "944baed3-d885",
     "mobile": "08035567123",
     "email": "gamys0@fc2.com",
     "account_type": "Member",
     "date": "2/5/2022",
-    "time": "11:40 PM"
-  }, {
+    "time": "11:40 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 19,
     "residence_id": "1a9bba3e",
     "mobile": "08035567123",
     "email": "jhendrik4@pbs.org",
     "account_type": "Staff",
     "date": "12/23/2021",
-    "time": "10:14 AM"
-  }, {
+    "time": "10:14 AM",
+    "category": "Pending"
+  },
+  {
     "id": 20,
     "residence_id": "66044196-",
     "mobile": "08035567123",
     "email": "gamys0@fc2.com",
     "account_type": "Staff",
     "date": "9/5/2022",
-    "time": "7:37 PM"
-  }, {
+    "time": "7:37 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 21,
     "residence_id": "88e47c12",
     "mobile": "07012455665",
     "email": "gamys0@fc2.com",
     "account_type": "Member",
     "date": "10/17/2022",
-    "time": "7:30 AM"
-  }, {
+    "time": "7:30 AM",
+    "category": "Pending"
+  },
+  {
     "id": 22,
     "residence_id": "fe04c89f",
     "mobile": "08035567123",
     "email": "jhendrik4@pbs.org",
     "account_type": "Member",
     "date": "7/3/2022",
-    "time": "9:02 AM"
-  }, {
+    "time": "9:02 AM",
+    "category": "Pending"
+  },
+  {
     "id": 23,
     "residence_id": "9a050899",
     "mobile": "08037891104",
     "email": "nescott2@china.com.cn",
     "account_type": "Member",
     "date": "10/18/2022",
-    "time": "3:18 PM"
-  }, {
+    "time": "3:18 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 24,
     "residence_id": "9c608bd4",
     "mobile": "08037891104",
     "email": "gamys0@fc2.com",
     "account_type": "Member",
     "date": "8/1/2022",
-    "time": "9:22 PM"
-  }, {
+    "time": "9:22 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 25,
     "residence_id": "50cdb3e4",
     "mobile": "09034518909",
     "email": "nescott2@china.com.cn",
     "account_type": "Member",
     "date": "7/22/2022",
-    "time": "10:40 AM"
-  }, {
+    "time": "10:40 AM",
+    "category": "Pending"
+  },
+  {
     "id": 26,
     "residence_id": "4d533dca",
     "mobile": "09034518909",
     "email": "nescott2@china.com.cn",
     "account_type": "Member",
     "date": "4/30/2022",
-    "time": "8:39 PM"
-  }, {
+    "time": "8:39 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 27,
     "residence_id": "cb9f1ad2",
     "mobile": "08037891104",
     "email": "jhendrik4@pbs.org",
     "account_type": "Member",
     "date": "3/6/2022",
-    "time": "8:11 PM"
-  }, {
+    "time": "8:11 PM",
+    "category": "Resolved"
+  },
+  {
     "id": 28,
     "residence_id": "c66705d9",
     "mobile": "09034518909",
     "email": "nescott2@china.com.cn",
     "account_type": "Staff",
     "date": "5/4/2022",
-    "time": "4:00 PM"
-  }, {
+    "time": "4:00 PM",
+    "category": "Pending"
+  },
+  {
     "id": 29,
     "residence_id": "c3d3667c",
     "mobile": "08037891104",
     "email": "nescott2@china.com.cn",
     "account_type": "Member",
     "date": "11/18/2021",
-    "time": "8:32 AM"
-  }, {
+    "time": "8:32 AM",
+    "category": "Pending"
+  },
+  {
     "id": 30,
     "residence_id": "5f21a46b",
     "mobile": "09034518909",
     "email": "nescott2@china.com.cn",
     "account_type": "Member",
     "date": "10/28/2022",
-    "time": "8:18 PM"
-  }]
+    "time": "8:18 PM",
+    "category": "Resolved"
+  }
+]
