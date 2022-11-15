@@ -269,41 +269,6 @@ function ActivityResidence() {
             Transaction table: Residence
             <div className="event-container">
               <HandleSearchAndTab>
-                <div className="tabs">
-                  <span
-                    className={`tab ${checkActive(1, "active")}`}
-                    onClick={() => handleClick(1)}
-                  >
-                    <button
-                      onClick={(e) => setEvents(TransactionResidenceData)}
-                    >
-                      All
-                    </button>
-                  </span>
-
-                  <span
-                    className={`tab ${checkActive(2, "active")}`}
-                    onClick={() => handleClick(2)}
-                  >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Pending")}
-                    >
-                      Pending
-                    </button>
-                  </span>
-                  <span
-                    className={`tab ${checkActive(3, "active")}`}
-                    onClick={() => handleClick(3)}
-                  >
-                    <button
-                      className="btn"
-                      onClick={() => filterEvents("Resolved")}
-                    >
-                      Resolved
-                    </button>
-                  </span>
-                </div>
                 <div className="event-input">
                   <div class="search_set">
                     <img
@@ -346,7 +311,7 @@ function ActivityResidence() {
                             <th>Purpose</th>
                             <th>Date and Time</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            {/* <th>Action</th> */}
                           </tr>
                         </thead>
                         <tbody> {displayEvents} </tbody>
