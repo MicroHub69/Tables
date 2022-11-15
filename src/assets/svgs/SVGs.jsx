@@ -4,6 +4,10 @@ export const SVGs = {
   Call: require("../svgs/callGroup.svg").default,
   ActivitySvg: require("../svgs/activitySVG.svg").default,
   ActivityEntry: require("../svgs/Entry.svg").default,
+  SecuritySvg: require("../svgs/securitySvg.svg").default,
+  VendorSvg: require("../svgs/vendorSvg.svg").default,
+  ResidenceSvg: require("../svgs/residence.svg").default,
+  TransactionResidenceSvg: require("../svgs/transactionResidenceSvg.svg").default,
 };
 
 /**

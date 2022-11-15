@@ -1,0 +1,6 @@
+[{"id":1, "payment_method":"Collection Name Here","acct_details":"0239023932","price":"200,000","payment_reason":"Vendor"},
+{"id":2,"payment_method":"Collection Name Here","acct_details":"0239023932","price":"350,000","payment_reason":"Security"},
+{"id":3,"payment_method":"Collection Name Here","acct_details":"0239023932","price":"237,000","payment_reason":"Residence"},
+{"id":4,"payment_method":"Collection Name Here","acct_details":"0239023932","price":"567,000","payment_reason":"Vendor"}
+
+]

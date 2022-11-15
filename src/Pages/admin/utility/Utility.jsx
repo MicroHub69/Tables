@@ -1,48 +1,117 @@
+
 import React, { useState } from "react";
 import Pagination from "rc-pagination";
-import TransactionData from "./TrasactionData.json";
-// import SampleDrop from "../../components/Select";
+import UtilityData from './UtilityData.json'
+import SampleDrop from "../../../components/Select";
 import styled from "styled-components";
-// import SelectDrop from "../../components/Select";
+import { Imgs } from "../../../assets/image/Imgs";
 
 const TableFrame = styled.div`
-  // background-color: yellow !important;
-  .img-avatar img {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+
+ 
+  .team-members {
+    margin-top: 40px;
+  
   }
-  .img-avatar {
+
+  .Utility_table {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+
+  }
+  .utils {
+    margin-bottom: 10px;
+    height: 190px;
+    padding: 16px;
+    width: 100%;
+    border: 1px solid #2D4BF3;
+    border-radius: 5px;
+    
+  }
+
+  .reason {
+    width: 128px;
+    height: 24px;
+    background: #F2F6FF;
+    border: 1px solid #2D4BF3;
+    border-radius: 5px;
+    padding: 4px 8px;
+
+  }
+  .price {
+    margin-top: 10px;
+  }
+   .util-acct {
+     margin-top: 10px;
+     
+  }
+
+  .btn {
+    margin-top: 15px;
+    // left: 10px;
+    margin: 8px;
+    display: flex;
+  
+
+  }
+  .del-btn {
+    color: #FF6969;
+    display: flex;
+    align-items: center;
+    width: 37px;
+    height: 16px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  .edit-btn {
+    color: #2D4BF3;
+    // display: flex;
+   
+    cursor: pointer;
+    width: 23px;
+    height: 16px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
     display: flex;
     align-items: center;
   }
-  .user-name {
-    margin-left: 10px;
+  @media(min-width: 540px){
+    .utils{
+      width: 48%;
+    }
   }
-  .team-members {
-    // display: flex;
-    // justify-content: space-between;
-    margin-top: 40px;
+  @media(min-width: 1024px){
+    .utils{
+      width: 33%;
+    }
   }
-  .team {
-    display: flex;
-    justify-content: space-between;
+  @media(min-width: 1200px){
+    .utils{
+      width: 24%;
+    }
   }
-  .payment_reason {
-    font-weight: bold;
-  }
-  
 `;
 
-const TransactionTable = () => {
+const Utility = () => {
   const [selected, setSelected] = useState("Fiter by:");
   // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
   // ======STATES FOR PAGINATION
-  const datatableUsers = TransactionData;
+  const datatableUsers = UtilityData;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
+  const [ utilsData, setUtilsData ] = useState([datatableUsers]);
 
   const PerPageChange = (value) => {
     setSize(value);
@@ -79,24 +148,23 @@ const TransactionTable = () => {
     }
     return originalElement;
   };
+
+   const handleEdit = (e) => {
+    console.log("edited")
+
+   }
+
+   const handleDelete = (id) => {
+    const newList = utilsData.filter((l) => l.id !== id )
+    setUtilsData(newList)
+   }
+
+
   const PerData = () => {
     return (
       <TableFrame>
         <div className="team-members">
-          <div className="scrollable_table">
-            <table>
-              <thead>
-                <tr>
-               
-                  <th>Residence Address</th>
-                  <th>Residence Name</th>
-                  <th>Mail</th>
-                  <th>Payment Reason</th>
-                  <th>Amount</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
+          <div className="Utility_table">
                 {getData(current, size)
                   .filter((val) => {
                     if (searchInput === "") {
@@ -110,37 +178,32 @@ const TransactionTable = () => {
                   .slice()
                   .map((data) => {
                     return (
-                      <tr>
-                       
-                        <td>{data.address}</td>
-                        <td>
-                          <div className="img-avatar">                     
-                            <div className="user-name">
-                              {data.last_name} {data.first_name}
+                        <div className="utils" key={data.id}>
+
+                            <div className="util-payment">
+                              <img src={Imgs.PayStack} alt="" />
+                              <div className="reason">
+                               <img src={Imgs.PowerAndElectricity} alt="" />
+                              </div>
+                               <div className="util-acct">
+                                Price: {data.price}
+                               <div className="price">
+                               Access Bank: {data.acct_details}
+                              </div>
+                              </div>
+                              <div className="btn">
+                                <span className="edit-btn" onClick={() => handleEdit()}>Edit</span>
+                                <span className="del-btn" onClick={() => handleDelete(data.id)}>Delete</span>
+                               </div>
                             </div>
-                          </div>
-                        </td>
-
-
-                        <td >
-                          {data.email}                       
-                          </td>
-                        <td className="payment_reason">
-                          {data.payment_reason}                       
-                          </td>
-                        <td className="resume_data">
-                          {data.amount}                       
-                          </td>
-                        <td className="resume_data">{data.dateTime} </td>
-                       
-                      </tr>
+                        
+                        </div>             
                     );
                   })}
-              </tbody>
-            </table>
+           
           </div>
           <Pagination
-            key={TransactionData.id}
+            key={UtilityData.id}
             className="pagination-data"
             // showTotal={(total, range) => `${range[0]}-${range[1]} / ${total}`}
             onChange={PaginationChange}
@@ -150,7 +213,7 @@ const TransactionTable = () => {
             showSizeChanger={false}
             itemRender={PrevNextArrow}
             onShowSizeChange={PerPageChange}
-          />
+            />
         </div>
       </TableFrame>
     );
@@ -158,7 +221,7 @@ const TransactionTable = () => {
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Transaction Details</h3>
+        <h3>Utility</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">
@@ -176,11 +239,11 @@ const TransactionTable = () => {
       </div>
 
       <div className="">
-        {/* <SampleDrop selected={selected} setSelected={setSelected} /> */}
+        <SampleDrop selected={selected} setSelected={setSelected} />
         <PerData />
       </div>
     </section>
   );
 };
 
-export default TransactionTable;
+export default Utility;

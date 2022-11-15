@@ -1,0 +1,241 @@
+[{
+    "id": 1,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "7/28/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 2,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "7/13/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 3,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "4/23/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 4,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "2/7/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 5,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "6/6/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 6,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "12/12/2021",
+    "amount": "N120,000.00"
+  }, {
+    "id": 7,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "2/20/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 8,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "8/24/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 9,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "7/5/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 10,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "2/15/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 11,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "1/19/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 12,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "6/18/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 13,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "5/1/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 14,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "3/4/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 15,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "2/7/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 16,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "5/6/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 17,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "8/16/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 18,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "1/14/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 19,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "11/23/2021",
+    "amount": "N120,000.00"
+  }, {
+    "id": 20,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "6/26/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 21,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "8/7/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 22,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "5/5/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 23,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "10/6/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 24,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "7/21/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 25,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "8/18/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 26,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "10/24/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 27,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 2",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "7/7/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 28,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "11/25/2021",
+    "amount": "N120,000.00"
+  }, {
+    "id": 29,
+    "collection_name": "Monthly Dues",
+    "zone": "Zone 1",
+    "collection": "#451289056",
+    "collection_target": "Vendor",
+    "date": "7/9/2022",
+    "amount": "N120,000.00"
+  }, {
+    "id": 30,
+    "collection_name": "Monthly Dues",
+    "zone": "Block 3A",
+    "collection": "#451289056",
+    "collection_target": "Residence",
+    "date": "5/7/2022",
+    "amount": "N120,000.00"
+  }]

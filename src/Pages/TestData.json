@@ -6,7 +6,8 @@
     "team_role": "Administrative Assistant I",
     "last_active": "21-07-2022",
     "status": "active",
-    "last_name": "Labrone"
+    "last_name": "Labrone",
+    "category": "Resolved"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "team_role": "Account Executive",
     "last_active": "09-04-2022",
     "status": "pending",
-    "last_name": "Benck"
+    "last_name": "Benck",
+    "category": "Pending"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "team_role": "Technical Writer",
     "last_active": "11-07-2022",
     "status": "active",
-    "last_name": "Neville"
+    "last_name": "Neville",
+    "category": "Resolved"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "team_role": "Budget/Accounting Analyst IV",
     "last_active": "22-04-2022",
     "status": "pending",
-    "last_name": "Dionisio"
+    "last_name": "Dionisio",
+    "category": "Pending"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "team_role": "Programmer I",
     "last_active": "09-07-2022",
     "status": "active",
-    "last_name": "Georgeon"
+    "last_name": "Georgeon",
+    "category": "Resolved"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "team_role": "Software Consultant",
     "last_active": "03-02-2022",
     "status": "pending",
-    "last_name": "Polotti"
+    "last_name": "Polotti",
+    "category": "Pending"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "team_role": "Environmental Specialist",
     "last_active": "29-05-2022",
     "status": "active",
-    "last_name": "Torresi"
+    "last_name": "Torresi",
+    "category": "Resolved"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "team_role": "Recruiting Manager",
     "last_active": "14-06-2022",
     "status": "pending",
-    "last_name": "Bredbury"
+    "last_name": "Bredbury",
+    "category": "Pending"
   },
   {
     "id": 9,
@@ -78,7 +86,9 @@
     "team_role": "Editor",
     "last_active": "05-05-2022",
     "status": "pending",
-    "last_name": "Pawellek"
+    "last_name": "Pawellek",
+    "category": "Resolved"
+
   },
   {
     "id": 10,
@@ -87,7 +97,8 @@
     "team_role": "Executive Secretary",
     "last_active": "19-09-2022",
     "status": "active",
-    "last_name": "Heales"
+    "last_name": "Heales",
+    "category": "Pending"
   },
   {
     "id": 11,
@@ -96,7 +107,9 @@
     "team_role": "Human Resources Manager",
     "last_active": "02-12-2021",
     "status": "pending",
-    "last_name": "Hacun"
+    "last_name": "Hacun",
+    "category": "Resolved"
+
   },
   {
     "id": 12,
@@ -105,7 +118,9 @@
     "team_role": "Director of Sales",
     "last_active": "28-08-2022",
     "status": "active",
-    "last_name": "Brakespear"
+    "last_name": "Brakespear",
+    "category": "Pending"
+
   },
   {
     "id": 13,
@@ -114,7 +129,9 @@
     "team_role": "Junior Executive",
     "last_active": "23-05-2022",
     "status": "pending",
-    "last_name": "Garrals"
+    "last_name": "Garrals",
+    "category": "Resolved"
+
   },
   {
     "id": 14,
@@ -123,7 +140,9 @@
     "team_role": "Senior Quality Engineer",
     "last_active": "20-01-2022",
     "status": "active",
-    "last_name": "Bagley"
+    "last_name": "Bagley",
+    "category": "Resolved"
+
   },
   {
     "id": 15,
@@ -132,7 +151,9 @@
     "team_role": "Staff Scientist",
     "last_active": "31-05-2022",
     "status": "pending",
-    "last_name": "Manford"
+    "last_name": "Manford",
+    "category": "Resolved"
+
   },
   {
     "id": 16,
@@ -141,7 +162,9 @@
     "team_role": "Administrative Officer",
     "last_active": "21-01-2022",
     "status": "pending",
-    "last_name": "Ovell"
+    "last_name": "Ovell",
+    "category": "Resolved"
+
   },
   {
     "id": 17,
@@ -150,7 +173,9 @@
     "team_role": "Payment Adjustment Coordinator",
     "last_active": "12-04-2022",
     "status": "active",
-    "last_name": "Gosse"
+    "last_name": "Gosse",
+    "category": "Resolved"
+
   },
   {
     "id": 18,
@@ -159,7 +184,9 @@
     "team_role": "Quality Control Specialist",
     "last_active": "10-06-2022",
     "status": "pending",
-    "last_name": "Osbourn"
+    "last_name": "Osbourn",
+    "category": "Pending"
+
   },
   {
     "id": 19,
@@ -168,7 +195,9 @@
     "team_role": "Director of Sales",
     "last_active": "08-10-2022",
     "status": "active",
-    "last_name": "Balf"
+    "last_name": "Balf",
+    "category": "Resolved"
+
   },
   {
     "id": 20,
@@ -177,7 +206,9 @@
     "team_role": "Marketing Assistant",
     "last_active": "18-12-2021",
     "status": "pending",
-    "last_name": "Bolzen"
+    "last_name": "Bolzen",
+    "category": "Pending"
+
   },
   {
     "id": 21,
@@ -186,7 +217,9 @@
     "team_role": "Quality Engineer",
     "last_active": "09-10-2022",
     "status": "active",
-    "last_name": "Blesli"
+    "last_name": "Blesli",
+    "category": "Resolved"
+
   },
   {
     "id": 22,
@@ -195,7 +228,9 @@
     "team_role": "Professor",
     "last_active": "30-09-2022",
     "status": "pending",
-    "last_name": "Antonowicz"
+    "last_name": "Antonowicz",
+    "category": "Pending"
+
   },
   {
     "id": 23,
@@ -204,7 +239,9 @@
     "team_role": "Recruiting Manager",
     "last_active": "29-07-2022",
     "status": "active",
-    "last_name": "Ladewig"
+    "last_name": "Ladewig",
+    "category": "Resolved"
+
   },
   {
     "id": 24,
@@ -213,7 +250,9 @@
     "team_role": "Research Associate",
     "last_active": "05-05-2022",
     "status": "active",
-    "last_name": "McCarroll"
+    "last_name": "McCarroll",
+    "category": "Pending"
+
   },
   {
     "id": 25,
@@ -222,7 +261,9 @@
     "team_role": "Computer Systems Analyst I",
     "last_active": "29-10-2022",
     "status": "active",
-    "last_name": "Semmens"
+    "last_name": "Semmens",
+    "category": "Resolved"
+
   },
   {
     "id": 26,
@@ -231,7 +272,9 @@
     "team_role": "Marketing Manager",
     "last_active": "19-05-2022",
     "status": "active",
-    "last_name": "Severns"
+    "last_name": "Severns",
+    "category": "Pending"
+
   },
   {
     "id": 27,
@@ -240,7 +283,9 @@
     "team_role": "Cost Accountant",
     "last_active": "12-07-2022",
     "status": "pending",
-    "last_name": "Winscomb"
+    "last_name": "Winscomb",
+    "category": "Resolved"
+
   },
   {
     "id": 28,
@@ -249,7 +294,9 @@
     "team_role": "Accounting Assistant II",
     "last_active": "13-09-2022",
     "status": "pending",
-    "last_name": "Melson"
+    "last_name": "Melson",
+    "category": "Resolved"
+
   },
   {
     "id": 29,
@@ -258,7 +305,9 @@
     "team_role": "Pharmacist",
     "last_active": "07-10-2022",
     "status": "active",
-    "last_name": "Porcas"
+    "last_name": "Porcas",
+    "category": "Pending"
+
   },
   {
     "id": 30,
@@ -267,6 +316,8 @@
     "team_role": "Business Systems Development Analyst",
     "last_active": "18-09-2022",
     "status": "active",
-    "last_name": "Pywell"
+    "last_name": "Pywell",
+    "category": "Resolved"
+
   }
 ]

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "rc-pagination";
-import ActivityData from "./ActivityData.json";
-import SampleDrop from "../../components/Select";
+import ResidenceDataInResidence from './ResidenceDataInResidence.json'
 import styled from "styled-components";
-import { SVGs } from "../../assets/svgs/SVGs";
+import { SVGs } from "../../../assets/svgs/SVGs";
 
 
 const TableFrame = styled.div`
@@ -29,26 +28,17 @@ const TableFrame = styled.div`
   
   /* Grey/2 */ 
   color: #545454;
+  
 }
   .user-name {
     margin-left: 10px;
   }
+  
   .team-members {
     margin-top: 40px;
     width: 65%;
   }
-  // .date-time {
-  //     width: 81px;
-  //     height: 36px;
-  //     font-family: 'DM Sans';
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     font-size: 16px;
-  //     line-height: 18px;
-  //     display: flex;
-  //     align-items: center;
-  //     color: #545454;
-  // }
+
   .residence-address {
       width: 153px;
       height: 34px;
@@ -82,9 +72,44 @@ const TableFrame = styled.div`
 
   }
   
-  .img-entry {
-    margin: 5px;
+
+  .transaction-purpose {
+    font-weight: 700;
+
+  }
+
+  .action_data {
+    margin: 20px 0;
+    width: 32px;
+    height: 10px;
+    font-size: 16px;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+  }
+  
+  .img-action {
+    margin: 20px 0;
+    display: flex;
+    align-itens: center;
+    justify-content: space-between;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    border: 1px solid #2D4BF3;
+    border-radius: 5px;
+    padding: 8px;
+    color: #2D4BF3;
+    cursor: pointer;
+
     
+  }
+
+  .img-action a {
+   margin-right: 8px;
+   cursor: pointer;
   }
   .activity-time {
     font-weight: 700;
@@ -135,7 +160,7 @@ const SwitchBtn = styled.div`
   }
 `;
 
-const ActivityTable = () => {
+const ResidenceTablesInResidence = () => {
   const [selected, setSelected] = useState("Fiter by:");
   const [searchInput, setSearchInput] = useState("");
   const [isChecked, setIsChecked] = useState(false);
@@ -151,7 +176,7 @@ const ActivityTable = () => {
 
   // ======
   // 👇️ STATES FOR PAGINATION
-  const datatableUsers = ActivityData;
+  const datatableUsers = ResidenceDataInResidence;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
@@ -199,17 +224,17 @@ const ActivityTable = () => {
           <div className="activity_table">
             <table>
               <thead>
-<<<<<<< HEAD
                 <tr className="activity_heading">
-              
-=======
+                </tr>
                 <tr>
->>>>>>> 8f7310c75b08a40472741231aec99888be70c476
-                  <th>Residence Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
                   <th>Email</th>
-                  <th>Residence Address</th>
-                  <th>Date and Time</th>
-                  <th>Action</th>
+                  <th>Mobile</th>
+                  <th>Date Joined</th>
+                  <th>Ranking</th>
+                  <th>Activate</th>
+                  <th>Deactivate</th>
                 </tr>
               </thead>
               <tbody>
@@ -228,68 +253,64 @@ const ActivityTable = () => {
                   .slice()
                   .map((item) => {
                     return (
-<<<<<<< HEAD
-                      // <div className="utils" key={data.id}>
-                      <tr>                
-                        <td>                     
-=======
+                                        
                       <tr>
                         <td>
                           <div className="img-avatar">
->>>>>>> 8f7310c75b08a40472741231aec99888be70c476
                             <div className="user-name">
-                              {item.last_name} {item.first_name}
+                              {item.first_name}
+                            </div>
+                          </div>  
+                        </td>
+
+                        <td>{item.last_name}</td>                  
+                        
+
+                        
+
+                        <td >
+                           <div className="date-time">
+                               {item.email}
                             </div>
                         </td>
 
-<<<<<<< HEAD
-                        <td>{data.email}</td>                  
-                        <td className="residence-address">
-                          {data.address}                       
-                          </td>
+                        <td >
+                           <div>
+                               {item.mobile}
+                            </div>
+                        </td>
                         <td >
                            <div className="date-time">
-                               {data.date}
+                               {item.date}
                             </div>
                            <div className="activity-time">
-                               {data.time}
+                               {item.time}
                             </div>
                                                                     
                           </td>
-                        <td className="resume_data"> 
-                            <div className="img-entry">
-                             <img src={SVGs.ActivitySvg}  />
+                        <td >
+                           <div className="transaction-purpose">
+                               {item.ranking}
                             </div>
-                            <div className="img-entry">
-                             <img  src={SVGs.ActivityEntry} />
-                            </div>
+                        
+                                                                    
+                          </td>
+
+                        <td >
+                           <div className="date-time">
+                               {item.activate}
+                            </div>                                                     
+                          </td>
+
+                        <td> 
+                            <div className="date-time">
+                               {item.deactivate}
+                                
+                            </div>                       
                         </td>
                        
-=======
-                        <td>{item.email}</td>
 
-                        <td className="resume_data">{item["Access code"]}</td>
-                        <td className="resume_data">{item.address}</td>
-                        <td className="resume_data">{item.dateTime}</td>
-                        <td className="resume_data">
-                          <SwitchBtn>
-                            <input
-                              value=""
-                              style={{ margin: "20px" }}
-                              type="checkbox"
-                              id={item.id}
-                              onChange={handleChange}
-                              checked={isChecked}
-                            />
-
-                            <label class="switch" htmlFor={item.id}></label>
-                          </SwitchBtn>{" "}
-                          {/* <SelectDrop
-                            selected={selected}
-                            setSelected={setSelected}
-                          />{" "} */}
-                        </td>
->>>>>>> 8f7310c75b08a40472741231aec99888be70c476
+                       
                       </tr>
                     
                     );
@@ -298,7 +319,7 @@ const ActivityTable = () => {
             </table>
           </div>
           <Pagination
-            key={ActivityData.id}
+            key={ ResidenceTablesInResidence.id}
             className="pagination-data"
             // showTotal={(total, range) => `${range[0]}-${range[1]} / ${total}`}
             onChange={PaginationChange}
@@ -316,7 +337,7 @@ const ActivityTable = () => {
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Activity Log: Admin</h3>
+        <h3>Residence: Residence</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">
@@ -334,13 +355,12 @@ const ActivityTable = () => {
       </div>
 
       <div className="">
-        <SampleDrop selected={selected} setSelected={setSelected} />
         <PerData />
       </div>
     </section>
   );
 };
 
-export default ActivityTable;
+export default ResidenceTablesInResidence;
 
 

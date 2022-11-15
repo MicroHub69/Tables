@@ -1,117 +1,90 @@
-
 import React, { useState } from "react";
 import Pagination from "rc-pagination";
-import UtilityData from '../utility/UtilityData.json'
-import SampleDrop from "../../components/Select";
+import ResidenceData from "./ResidenceData.json";
+import SampleDrop from "../../../components/Select";
 import styled from "styled-components";
-import { Imgs } from "../../assets/image/Imgs";
+import SelectDrop from "../../../components/Select";
+import { SVGs } from "../../../assets/svgs/SVGs";
 
 const TableFrame = styled.div`
 
- 
+.scrollable_table {
+  font-family: 'Satoshi';
+  margin-left: 40px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  display: flex;
+  align-items: center;
+  /* Grey/2 */ 
+  color: #545454;
+}
+
+.scrollable_table tr {
+  margin-left: 20px;
+}
+
+  .img-avatar img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  .img-avatar {
+    display: flex;
+    align-items: center;
+  }
+  .user-name {
+    margin-left: 10px;
+    width: 134px;
+    height: 23px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.06em;
+
+    /* Grey/1 */
+    color: #111111;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+  }
   .team-members {
-    margin-top: 40px;
-  
-  }
-
-  .Utility_table {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 10px;
-
-  }
-  .utils {
-    margin-bottom: 10px;
-    height: 190px;
-    padding: 16px;
-    width: 100%;
-    border: 1px solid #2D4BF3;
-    border-radius: 5px;
-    
-  }
-
-  .reason {
-    width: 128px;
-    height: 24px;
-    background: #F2F6FF;
-    border: 1px solid #2D4BF3;
-    border-radius: 5px;
-    padding: 4px 8px;
-
-  }
-  .price {
-    margin-top: 10px;
-  }
-   .util-acct {
-     margin-top: 10px;
-     
-  }
-
-  .btn {
-    margin-top: 15px;
-    // left: 10px;
-    margin: 8px;
-    display: flex;
-  
-
-  }
-  .del-btn {
-    color: #FF6969;
-    display: flex;
-    align-items: center;
-    width: 37px;
-    height: 16px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    margin-left: 15px;
-    cursor: pointer;
-  }
-  .edit-btn {
-    color: #2D4BF3;
     // display: flex;
-   
-    cursor: pointer;
-    width: 23px;
-    height: 16px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    // justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .contact {
+    margin: 5px;
     display: flex;
-    align-items: center;
   }
-  @media(min-width: 540px){
-    .utils{
-      width: 48%;
-    }
+  .contact a{
+    margin: 8px;
+    width: 30px;
+    height: 30px;
+   
   }
-  @media(min-width: 1024px){
-    .utils{
-      width: 33%;
-    }
-  }
-  @media(min-width: 1200px){
-    .utils{
-      width: 24%;
-    }
-  }
+ 
+  
 `;
 
-const Utility = () => {
+const ResidenceTable = () => {
   const [selected, setSelected] = useState("Fiter by:");
   // SEARCH INPUT
   const [searchInput, setSearchInput] = useState("");
   // ======STATES FOR PAGINATION
-  const datatableUsers = UtilityData;
+  const datatableUsers = ResidenceData;
   const [perPage, setPerPage] = useState(8);
   const [size, setSize] = useState(perPage);
   const [current, setCurrent] = useState(1);
-  const [ utilsData, setUtilsData ] = useState([datatableUsers]);
 
   const PerPageChange = (value) => {
     setSize(value);
@@ -148,23 +121,22 @@ const Utility = () => {
     }
     return originalElement;
   };
-
-   const handleEdit = (e) => {
-    console.log("edited")
-
-   }
-
-   const handleDelete = (id) => {
-    const newList = utilsData.filter((l) => l.id !== id )
-    setUtilsData(newList)
-   }
-
-
   const PerData = () => {
     return (
       <TableFrame>
-        <div className="team-members">
-          <div className="Utility_table">
+        <div>
+          <div className="scrollable_table">
+            <table>
+              <thead>
+                <tr>
+                 
+                  <th>Residence ID</th>
+                  <th>Address</th>
+                  <th>Contact</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
                 {getData(current, size)
                   .filter((val) => {
                     if (searchInput === "") {
@@ -178,32 +150,43 @@ const Utility = () => {
                   .slice()
                   .map((data) => {
                     return (
-                        <div className="utils" key={data.id}>
-
-                            <div className="util-payment">
-                              <img src={Imgs.PayStack} alt="" />
-                              <div className="reason">
-                               <img src={Imgs.PowerAndElectricity} alt="" />
-                              </div>
-                               <div className="util-acct">
-                                Price: {data.price}
-                               <div className="price">
-                               Access Bank: {data.acct_details}
-                              </div>
-                              </div>
-                              <div className="btn">
-                                <span className="edit-btn" onClick={() => handleEdit()}>Edit</span>
-                                <span className="del-btn" onClick={() => handleDelete(data.id)}>Delete</span>
-                               </div>
+                      <tr>
+                        <td>
+                          <div className="img-avatar">
+                            <img
+                              src="https://images.unsplash.com/photo-1667222886295-72267cdc99ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                              alt=""
+                            />
+                            <div className="user-name">
+                              {data.last_name} {data.first_name}
                             </div>
+                              <p> {data.id}</p>
+                          </div>
+                        </td>
+
+                        <td>{data.adress}</td>
+
+                        <td className="contact_data">
+                          <div className="contact">
+                            <a href="tel:5554280940" >
+                              <img src={SVGs.Call} alt=""  />
+                            </a>
+                            <a a href = "mailto:abc@example.com?subject = Feedback&body = Message" >
+                              <img src={SVGs.Email} alt=""  />
+                            </a>                   
+                          </div>                       
                         
-                        </div>             
+                          </td>
+                        <td className="resume_data"> <SelectDrop /> </td>
+                        
+                      </tr>
                     );
                   })}
-           
-           </div>
+              </tbody>
+            </table>
+          </div>
           <Pagination
-            key={UtilityData.id}
+            key={ResidenceData.id}
             className="pagination-data"
             // showTotal={(total, range) => `${range[0]}-${range[1]} / ${total}`}
             onChange={PaginationChange}
@@ -213,15 +196,16 @@ const Utility = () => {
             showSizeChanger={false}
             itemRender={PrevNextArrow}
             onShowSizeChange={PerPageChange}
-            />
+          />
         </div>
       </TableFrame>
     );
   };
+  
   return (
     <section className="leads_cards">
       <div className="lead-tt">
-        <h3>Utility</h3>
+        <h3>Residence Table Admin</h3>
         {/* <p>Manage What users can do or see in the project</p> */}
         <div className="fiterCase">
           <div class="search_set">
@@ -246,4 +230,4 @@ const Utility = () => {
   );
 };
 
-export default Utility;
+export default ResidenceTable;
