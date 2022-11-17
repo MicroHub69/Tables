@@ -1,22 +1,11 @@
 import React, { useState } from "react";
 // import EmergencyContactData from "../../admin/emergencyContactList/EmergencyContactData.json";
 import EmergencyContactData from "../../Residence_tables/activityResidence/EmergencyContactData.json";
-// import ActivityResidenceData from "../../Residence_tables/activityResidence/ActivityResidenceData.json";
 
 import styled from "styled-components";
 
 const TableFrame = styled.div`
-  .activity_heading {
-    font-family: "Satoshi";
-    margin: 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 121%;
-    color: #545454;
-  }
-  .activity_table {
-    font-family: "Satoshi";
+  .emergency_table {
     margin: 20px;
     font-style: normal;
     font-weight: 400;
@@ -24,21 +13,12 @@ const TableFrame = styled.div`
     line-height: 121%;
     display: flex;
     align-items: center;
-
-    /* Grey/2 */
     color: #545454;
   }
-  .user-name {
-    margin-left: 10px;
-  }
-  .team-members {
-    margin-top: 40px;
-    width: 65%;
-  }
+
   .date-time {
     width: 81px;
     height: 36px;
-    font-family: "DM Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -48,20 +28,6 @@ const TableFrame = styled.div`
     color: #545454;
   }
 
-  .resume_data {
-    margin: 15px;
-    width: 32px;
-    height: 18px;
-    font-family: "DM Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18px;
-    display: flex;
-    // justify-content: space-between;
-    align-items: center;
-    letter-spacing: -0.06em;
-  }
   .emergency-action {
     display: flex;
     align-items: center;
@@ -80,15 +46,12 @@ const TableFrame = styled.div`
     color: #2d4bf3;
     cursor: pointer;
   }
-  .emergency-row {
-    display: flex;
-    justify-content: space-around;
+
+  table td {
+    min-width: 60px;
   }
 
-  .img-entry {
-    margin: 5px;
-  }
-  .activity-time {
+  .emergency-time {
     font-weight: 700;
   }
 `;
@@ -109,19 +72,22 @@ function EmergencyContactTable() {
 
     return (
       <tr>
-        {/* <td className="checkmarking"> */}
-
-        {/* </td> */}
+        <td>
+          <div>{row_number}.</div>
+        </td>
 
         <td className="emergency-row">
-          <div>{row_number}</div>
           <div> {emergency_detail} </div>
         </td>
         <td>{type}</td>
         <td>{address}</td>
         <td>
-          <div className="date-time">{contact_phone}</div>
-          <div className="activity-time">{contact_email}</div>
+          <div className="date-time">
+            <p>{contact_phone}</p>
+          </div>
+          <div className="emergency-time">
+            <p>{contact_email}</p>
+          </div>
         </td>
         <td>
           <div className="emergency-action ">
@@ -138,10 +104,11 @@ function EmergencyContactTable() {
       <section className="change_ratio">
         <TableFrame>
           <div>
-            <div className="activity_table">
+            <div className="emergency_table">
               <table>
                 <thead>
-                  <tr>
+                  <tr className="emergency-table-row">
+                    <th></th>
                     <th>Emergency Detail</th>
                     <th>Type</th>
                     <th>Address</th>
