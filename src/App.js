@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/table.css";
-import EmergencyContactTable from "./Pages/admin/emergencyContactList/EmergencyContactTable";
 // import UtilityTable from "./Pages/admin/utility/Utility";
 // import TransactionTable from "./Pages/transaction/TransactionData";
 // import ResidenceTable from "./Pages/admin/Residence/ResidenceTable";
@@ -13,6 +12,11 @@ import EmergencyContactTable from "./Pages/admin/emergencyContactList/EmergencyC
 // import LandingPage from "./Pages/Test";
 // import ActivityResidence from "./Pages/Residence_tables/activityResidence/ActivityResidence";
 // import ActivityTableExternal from "./Pages/external/ActivityTableExternal";
+
+// Modal Tables
+// import EmergencyContactTable from "./Pages/admin/emergencyContactList/EmergencyContactTable";
+// import TransactionCollectModal from "./Pages/admin/transaction/TransactionCollectModal";
+import ListOfPenalties from "./Pages/admin/transaction/listOfPenalties/ListOfPenalties";
 
 function App() {
   return (
@@ -30,7 +34,11 @@ function App() {
           {/* <Route index element={<ResidenceTable />} /> */}
           {/* <Route path="/table2" element={<NewTable />} /> */}
           {/* <Route index element={<ActivityTableExternal />} /> */}
-          <Route index element={<EmergencyContactTable />} />
+
+          {/* Modal Tables */}
+          {/* <Route index element={<EmergencyContactTable />} /> */}
+          {/* <Route index element={<TransactionCollectModal />} /> */}
+          <Route index element={<ListOfPenalties />} />
         </Routes>
       </BrowserRouter>
     </>
