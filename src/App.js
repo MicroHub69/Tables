@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/table.css";
+import EmergencyContactTable from "./Pages/admin/emergencyContactList/EmergencyContactTable";
 // import UtilityTable from "./Pages/admin/utility/Utility";
 // import TransactionTable from "./Pages/transaction/TransactionData";
 // import ResidenceTable from "./Pages/admin/Residence/ResidenceTable";
@@ -10,7 +11,7 @@ import "./assets/css/table.css";
 // import ResidenceTablesInResidence from "./Pages/Residence_tables/residenceResidence/ResidenceTablesInResidence";
 // import ResidenceTable from "./Pages/Residence/ResidenceTable";
 // import LandingPage from "./Pages/Test";
-import ActivityResidence from "./Pages/Residence_tables/activityResidence/ActivityResidence";
+// import ActivityResidence from "./Pages/Residence_tables/activityResidence/ActivityResidence";
 // import ActivityTableExternal from "./Pages/external/ActivityTableExternal";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route index element={<LandingPage />} /> */}
-          <Route index element={<ActivityResidence />} />
+          {/* <Route index element={<ActivityResidence />} /> */}
           {/* <Route index element={<TransactionResidence />} /> */}
           {/* <Route index element={<ResidenceTablesInResidence />} /> */}
           {/* <Route index element={<UtilityTable />} /> */}
@@ -29,6 +30,7 @@ function App() {
           {/* <Route index element={<ResidenceTable />} /> */}
           {/* <Route path="/table2" element={<NewTable />} /> */}
           {/* <Route index element={<ActivityTableExternal />} /> */}
+          <Route index element={<EmergencyContactTable />} />
         </Routes>
       </BrowserRouter>
     </>
