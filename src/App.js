@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/table.css";
 // import UtilityTable from "./Pages/admin/utility/Utility";
@@ -16,7 +16,12 @@ import "./assets/css/table.css";
 // Modal Tables
 // import EmergencyContactTable from "./Pages/admin/emergencyContactList/EmergencyContactTable";
 // import TransactionCollectModal from "./Pages/admin/transaction/TransactionCollectModal";
-import ListOfPenalties from "./Pages/admin/transaction/listOfPenalties/ListOfPenalties";
+// import ListOfPenalties from "./Pages/admin/transaction/listOfPenalties/ListOfPenalties";
+// import CrmTables from "../src/crmTables/CrmTable";
+// import Unsubscribe from "../src/Pages/Unsubscribe";
+// import Nda from "../src/Pages/Nda";
+// import Event from "../src/Pages/Event";
+import EventDetails from "../src/Pages/EventDetails";
 
 function App() {
   return (
@@ -38,7 +43,13 @@ function App() {
           {/* Modal Tables */}
           {/* <Route index element={<EmergencyContactTable />} /> */}
           {/* <Route index element={<TransactionCollectModal />} /> */}
-          <Route index element={<ListOfPenalties />} />
+          {/* <Route index element={<ListOfPenalties />} /> */}
+
+          {/* <Route index element={<CrmTables />} /> */}
+          {/* <Route index element={<Unsubscribe />} /> */}
+          {/* <Route index element={<Nda />} /> */}
+          {/* <Route index element={<Event />} /> */}
+          <Route index element={<EventDetails />} />
         </Routes>
       </BrowserRouter>
     </>

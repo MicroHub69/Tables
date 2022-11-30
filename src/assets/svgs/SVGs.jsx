@@ -5,9 +5,13 @@ export const SVGs = {
   ActivitySvg: require("../svgs/activitySVG.svg").default,
   ActivityEntry: require("../svgs/Entry.svg").default,
   SecuritySvg: require("../svgs/securitySvg.svg").default,
-  VendorSvg: require("../svgs/vendorSvg.svg").default,
   ResidenceSvg: require("../svgs/residence.svg").default,
-  TransactionResidenceSvg: require("../svgs/transactionResidenceSvg.svg").default,
+  TransactionResidenceSvg: require("../svgs/transactionResidenceSvg.svg")
+    .default,
+  eventChargeSvg: require("../svgs/eventChargeSvg.svg").default,
+  directionSvg: require("../svgs/directionSvg.svg").default,
+  shareSvg: require("../svgs/shareSvg.svg").default,
+  likeSvg: require("../svgs/likeSvg.svg").default,
 };
 
 /**
